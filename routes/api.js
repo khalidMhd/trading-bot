@@ -22,6 +22,11 @@ module.exports = (getContext) => {
     res.json(buildPayload());
   });
 
+  router.get('/data', (req, res) => {
+    const { buildPayload } = getContext();
+    res.json(buildPayload());
+  });
+
   router.get('/history', (req, res) => {
     const { signalHistory } = getContext();
     const limit = Math.min(parseInt(req.query.limit, 10) || 50, 200);

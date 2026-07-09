@@ -1,6 +1,7 @@
 const POLL_MS = 60000;
 const HISTORY_KEY = 'gold-bot-signal-history';
 const PAPER_KEY = 'gold-bot-paper-trades';
+const API = `${window.location.origin}/api`;
 
 let chart = null;
 let lastAlertedSignal = null;
@@ -249,7 +250,7 @@ async function runBacktest() {
   const el = document.getElementById('backtest-result');
   el.textContent = 'Running backtest…';
   try {
-    const res = await fetch('/api/backtest');
+    const res = await fetch(`${API}/backtest`);
     const bt = await res.json();
     if (bt.error) throw new Error(bt.error);
     updateBacktest(bt);
@@ -497,7 +498,7 @@ function renderHistory(history) {
 
 async function loadHistory() {
   try {
-    const res = await fetch('/api/history');
+    const res = await fetch(`${API}/history`);
     if (res.ok) {
       const history = await res.json();
       if (history.length) {
@@ -513,7 +514,8 @@ async function loadHistory() {
 
 async function fetchMarket() {
   try {
-    const res = await fetch('/api/market');
+    let res = await fetch(`${API}/data`);
+    if (!res.ok) res = await fetch(`${API}/market`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     if (data.error) throw new Error(data.error);
@@ -524,6 +526,11 @@ async function fetchMarket() {
     }
 
     updateUI(data);
+
+    const btEl = document.getElementById('backtest-result');
+    if (!data.backtest && btEl?.textContent?.includes('Loading')) {
+      runBacktest();
+    }
   } catch (err) {
     console.error('Market fetch failed:', err.message);
     document.getElementById('source-label').textContent = `Error: ${err.message}`;

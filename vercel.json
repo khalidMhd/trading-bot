@@ -1,6 +1,7 @@
 {
   "version": 2,
   "builds": [
+    { "src": "api/data.js", "use": "@vercel/node" },
     { "src": "api/market.js", "use": "@vercel/node" },
     { "src": "api/signal.js", "use": "@vercel/node" },
     { "src": "api/status.js", "use": "@vercel/node" },
@@ -9,12 +10,14 @@
     { "src": "public/**", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/api/data", "dest": "/api/data.js" },
     { "src": "/api/market", "dest": "/api/market.js" },
     { "src": "/api/signal", "dest": "/api/signal.js" },
     { "src": "/api/status", "dest": "/api/status.js" },
     { "src": "/api/history", "dest": "/api/history.js" },
     { "src": "/api/backtest", "dest": "/api/backtest.js" },
-    { "src": "/", "dest": "/public/index.html" },
-    { "src": "/(.*)", "dest": "/public/$1" }
+    { "src": "/app.js", "dest": "/public/app.js" },
+    { "src": "/styles.css", "dest": "/public/styles.css" },
+    { "src": "/", "dest": "/public/index.html" }
   ]
 }
