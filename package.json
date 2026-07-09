@@ -5,7 +5,6 @@
   "scripts": {
     "start": "node local-server.js",
     "dev": "node --watch local-server.js",
-    "build": "echo ok",
     "setup": "node scripts/setup-mt5.js",
     "backtest": "node scripts/run-backtest.js"
   },
