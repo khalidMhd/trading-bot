@@ -21,6 +21,7 @@
     { "src": "/how-it-works", "dest": "/public/how-it-works.html" },
     { "src": "/disclaimer", "dest": "/public/disclaimer.html" },
     { "src": "/privacy", "dest": "/public/privacy.html" },
+    { "src": "/BingSiteAuth.xml", "dest": "/public/BingSiteAuth.xml" },
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
     { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
     { "src": "/site.css", "dest": "/public/site.css" },
