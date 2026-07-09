@@ -20,9 +20,12 @@
     { "src": "/about", "dest": "/public/about.html" },
     { "src": "/how-it-works", "dest": "/public/how-it-works.html" },
     { "src": "/disclaimer", "dest": "/public/disclaimer.html" },
+    { "src": "/privacy", "dest": "/public/privacy.html" },
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
     { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
     { "src": "/site.css", "dest": "/public/site.css" },
+    { "src": "/site-config.js", "dest": "/public/site-config.js" },
+    { "src": "/monetize.js", "dest": "/public/monetize.js" },
     { "src": "/app.js", "dest": "/public/app.js" },
     { "src": "/styles.css", "dest": "/public/styles.css" },
     { "src": "/", "dest": "/public/index.html" }

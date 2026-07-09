@@ -21,6 +21,7 @@ const pageRoutes = {
   '/about': 'about.html',
   '/how-it-works': 'how-it-works.html',
   '/disclaimer': 'disclaimer.html',
+  '/privacy': 'privacy.html',
 };
 Object.entries(pageRoutes).forEach(([route, file]) => {
   app.get(route, (req, res) => {
