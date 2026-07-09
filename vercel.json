@@ -1,13 +1,9 @@
 {
-  "framework": null,
-  "buildCommand": "",
   "installCommand": "npm install",
-  "outputDirectory": "public",
   "functions": {
-    "api/market.js": { "maxDuration": 10 },
-    "api/signal.js": { "maxDuration": 10 },
-    "api/status.js": { "maxDuration": 10 },
-    "api/history.js": { "maxDuration": 10 },
-    "api/backtest.js": { "maxDuration": 10 }
+    "api/[...path].js": {
+      "maxDuration": 10,
+      "includeFiles": "services/**"
+    }
   }
 }
