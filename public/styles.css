@@ -23,6 +23,41 @@ body {
   min-height: 100vh;
 }
 
+.site-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-logo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-logo:hover { text-decoration: none; }
+
+.live-dot { color: var(--buy); font-size: 0.8rem; }
+
+.site-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.site-links a {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.site-links a:hover,
+.site-links a.active { color: var(--text); }
+
+.footer a { color: var(--accent); }
+
 .app {
   max-width: 1200px;
   margin: 0 auto;

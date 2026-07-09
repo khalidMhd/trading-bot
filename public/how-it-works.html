@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works — Gold Signal Strategy | Trading Bots Live</title>
+  <meta name="description" content="Learn how the Trading Bots Live gold signal bot scores XAUUSD setups using EMA, RSI, MACD, ADX, and 8-factor confluence for 15–30 minute M15 trades." />
+  <link rel="canonical" href="https://trading-bots.live/how-it-works" />
+  <meta property="og:title" content="How the Gold Signal Bot Works" />
+  <meta property="og:description" content="Multi-indicator probability scoring for XAUUSD short-term gold trades." />
+  <meta property="og:url" content="https://trading-bots.live/how-it-works" />
+  <link rel="stylesheet" href="/site.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="site-logo">Trading Bots <span class="live-dot">Live</span></a>
+    <div class="site-links">
+      <a href="/app">Live App</a>
+      <a href="/how-it-works" class="active">How It Works</a>
+      <a href="/about">About</a>
+      <a href="/disclaimer">Disclaimer</a>
+    </div>
+  </nav>
+
+  <main class="site-wrap">
+    <header class="page-header">
+      <h1>How the Gold Signal Bot Works</h1>
+      <p>A balanced, probability-based strategy for XAUUSD on the 15-minute chart.</p>
+    </header>
+
+    <div class="prose">
+      <h2>Overview</h2>
+      <p>
+        The bot analyses live M15 gold candles and scores each bar across <strong>8 technical factors</strong>.
+        It outputs BUY or SELL only when probability, confluence, trend strength (ADX), and directional edge all meet strict thresholds.
+        Typical hold time is <strong>15–30 minutes</strong>.
+      </p>
+
+      <h2>Signal requirements (balanced mode)</h2>
+      <ul>
+        <li><strong>75%+ probability</strong> in the signal direction</li>
+        <li><strong>12%+ edge</strong> over the opposite side (e.g. 75% buy vs 25% sell)</li>
+        <li><strong>5 of 8 factors</strong> agreeing on direction (confluence)</li>
+        <li><strong>ADX ≥ 22</strong> — confirms trend is strong enough to trade</li>
+      </ul>
+
+      <h2>8 scoring factors</h2>
+      <div class="factors-grid">
+        <div class="factor">📈 EMA Trend (9 / 21 / 50)</div>
+        <div class="factor">📉 RSI (14)</div>
+        <div class="factor">〰️ MACD</div>
+        <div class="factor">💪 ADX trend strength</div>
+        <div class="factor">🎯 Bollinger Bands</div>
+        <div class="factor">🕯️ Candle flow</div>
+        <div class="factor">✅ M5 confirmation</div>
+        <div class="factor">🌍 Session liquidity</div>
+      </div>
+
+      <h2>Stop loss &amp; take profit</h2>
+      <p>
+        When a signal fires, SL and TP are set automatically using <strong>ATR (14)</strong>:
+        stop loss at 1.5× ATR and take profit at 2.0× ATR from entry. This adapts to current gold volatility.
+      </p>
+
+      <h2>Getting started</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <div>
+            <strong>Open the live dashboard</strong>
+            <p style="margin:0;color:var(--muted);font-size:0.9rem">Watch probability bars and wait for BUY or SELL with SL/TP shown.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <div>
+            <strong>Enable alerts</strong>
+            <p style="margin:0;color:var(--muted);font-size:0.9rem">Click the bell icon for desktop notifications on new signals.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <div>
+            <strong>Paper trade for one week</strong>
+            <p style="margin:0;color:var(--muted);font-size:0.9rem">Track results in Live Accuracy before using a real account.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h2>See it live</h2>
+      <p>Watch real-time gold signals update every 60 seconds.</p>
+      <a href="/app" class="btn-primary">Launch Dashboard</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/app">Live App</a>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/about">About</a>
+      <a href="/disclaimer">Disclaimer</a>
+    </nav>
+    <p>© 2026 Trading Bots Live · Educational use only</p>
+  </footer>
+</body>
+</html>

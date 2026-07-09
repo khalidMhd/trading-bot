@@ -3,167 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gold Signal Bot — XAUUSD</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <title>Trading Bots Live — Free XAUUSD Gold Signal Bot</title>
+  <meta name="description" content="Free live gold (XAUUSD) trading signals for 15–30 minute trades. BUY/SELL probability, stop loss, take profit, and technical confluence — paper trade on Trading Bots Live." />
+  <meta name="keywords" content="gold trading bot, XAUUSD signals, gold signal bot, trading bots live, forex gold signals, M15 gold strategy" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://trading-bots.live/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://trading-bots.live/" />
+  <meta property="og:title" content="Trading Bots Live — Free XAUUSD Gold Signal Bot" />
+  <meta property="og:description" content="Live gold trading signals with probability scoring, SL/TP levels, and multi-indicator confluence. Free to use — paper trade first." />
+  <meta property="og:site_name" content="Trading Bots Live" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trading Bots Live — Gold Signal Bot" />
+  <meta name="twitter:description" content="Free live XAUUSD signals for short-term gold trades." />
+  <link rel="stylesheet" href="/site.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Trading Bots Live — Gold Signal Bot",
+    "url": "https://trading-bots.live/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "description": "Live XAUUSD gold trading signal dashboard with probability-based BUY/SELL alerts for 15–30 minute trades.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
 </head>
 <body>
-  <div class="app">
-    <header class="header">
-      <div class="header-left">
-        <h1>Gold Signal Bot</h1>
-        <span class="symbol">XAUUSD · M15</span>
+  <nav class="site-nav">
+    <a href="/" class="site-logo">Trading Bots <span class="live-dot">Live</span></a>
+    <div class="site-links">
+      <a href="/app">Live App</a>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/about">About</a>
+      <a href="/disclaimer">Disclaimer</a>
+    </div>
+  </nav>
+
+  <main class="site-wrap">
+    <section class="hero">
+      <div class="hero-badge">● Live XAUUSD Signals</div>
+      <h1>Free <span>Gold Signal Bot</span><br />for Short-Term Trades</h1>
+      <p class="hero-lead">
+        Real-time BUY and SELL signals on gold (XAUUSD) using M15 technical analysis.
+        Probability scoring, stop loss, take profit, and 8-factor confluence — built for 15–30 minute setups.
+      </p>
+      <div class="hero-cta">
+        <a href="/app" class="btn-primary">Launch Live Dashboard →</a>
+        <a href="/how-it-works" class="btn-secondary">How It Works</a>
       </div>
-      <div class="header-right">
-        <button id="notify-btn" class="btn-notify" type="button" title="Enable desktop alerts">🔔 Alerts</button>
-        <span id="mode-badge" class="badge badge-live">LIVE</span>
-        <span id="source-label" class="muted">—</span>
-        <span id="last-update" class="muted">—</span>
-      </div>
-    </header>
+    </section>
 
-    <main class="grid">
-      <section class="card signal-card">
-        <div class="signal-header">
-          <span class="label">Current Signal</span>
-          <span id="confidence" class="confidence">—</span>
-        </div>
-        <div id="signal-display" class="signal hold">HOLD</div>
+    <section class="features" aria-label="Features">
+      <article class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Probability-Based Signals</h3>
+        <p>Every setup shows BUY and SELL probability percentages. Signals fire only when confidence, confluence, and trend strength align.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Entry, SL &amp; TP</h3>
+        <p>Each active signal includes entry price, stop loss, and take profit calculated from ATR — ready for paper or live trading.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Live Price Feed</h3>
+        <p>Gold prices update every minute from Yahoo Finance (COMEX GC=F). Run locally with MetaTrader 5 for broker-exact prices.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h3>8-Factor Confluence</h3>
+        <p>EMA trend, RSI, MACD, ADX, Bollinger Bands, candle flow, M5 confirmation, and session liquidity — scored together.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">🔔</div>
+        <h3>Desktop Alerts</h3>
+        <p>Enable browser notifications to get alerted instantly when a BUY or SELL signal fires — no Telegram required.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon">🧪</div>
+        <h3>Backtest &amp; Paper Trade</h3>
+        <p>Review historical win rate on past M15 candles and track paper-trade accuracy before risking real capital.</p>
+      </article>
+    </section>
 
-        <div class="probability-panel">
-          <div class="prob-row">
-            <div class="prob-label">
-              <span class="prob-name buy-text">BUY</span>
-              <span id="buy-prob" class="prob-value">50%</span>
-            </div>
-            <div class="prob-bar-track">
-              <div id="buy-bar" class="prob-bar buy-bar" style="width:50%"></div>
-            </div>
-          </div>
-          <div class="prob-row">
-            <div class="prob-label">
-              <span class="prob-name sell-text">SELL</span>
-              <span id="sell-prob" class="prob-value">50%</span>
-            </div>
-            <div class="prob-bar-track">
-              <div id="sell-bar" class="prob-bar sell-bar" style="width:50%"></div>
-            </div>
-          </div>
-          <div class="prob-meta">
-            <span id="confluence">Confluence: —</span>
-            <span id="threshold-note">Signal fires at 75%+ (balanced)</span>
-          </div>
-        </div>
+    <section class="cta-box">
+      <h2>Start Paper Trading Gold Today</h2>
+      <p>Open the live dashboard, enable alerts, and follow signals for one week before going live.</p>
+      <a href="/app" class="btn-primary">Open Gold Signal Bot</a>
+    </section>
+  </main>
 
-        <div class="price-row">
-          <div>
-            <span class="label">Price</span>
-            <span id="price" class="price">—</span>
-          </div>
-          <div>
-            <span class="label">Hold Time</span>
-            <span id="hold-time" class="value">15–30 min</span>
-          </div>
-        </div>
-        <div class="levels">
-          <div class="level">
-            <span class="label">Entry</span>
-            <span id="entry" class="value">—</span>
-          </div>
-          <div class="level sl">
-            <span class="label">Stop Loss</span>
-            <span id="sl" class="value">—</span>
-          </div>
-          <div class="level tp">
-            <span class="label">Take Profit</span>
-            <span id="tp" class="value">—</span>
-          </div>
-        </div>
-        <ul id="reasons" class="reasons"></ul>
-      </section>
-
-      <section class="card indicators-card">
-        <h2>Indicators</h2>
-        <div class="indicator-grid">
-          <div class="indicator">
-            <span class="label">RSI (14)</span>
-            <span id="rsi" class="value">—</span>
-          </div>
-          <div class="indicator">
-            <span class="label">EMA 9 / 21</span>
-            <span id="ema" class="value">—</span>
-          </div>
-          <div class="indicator">
-            <span class="label">ATR (14)</span>
-            <span id="atr" class="value">—</span>
-          </div>
-          <div class="indicator">
-            <span class="label">ADX</span>
-            <span id="adx" class="value">—</span>
-          </div>
-          <div class="indicator">
-            <span class="label">Trend</span>
-            <span id="trend" class="value">—</span>
-          </div>
-          <div class="indicator">
-            <span class="label">H1 Trend</span>
-            <span id="h1-trend" class="value">—</span>
-          </div>
-          <div class="indicator">
-            <span class="label">Session</span>
-            <span id="session" class="value">—</span>
-          </div>
-        </div>
-        <div id="news-status" class="news-status clear">News: Clear</div>
-      </section>
-
-      <section class="card stats-card">
-        <h2>Live Accuracy</h2>
-        <div class="stats-grid">
-          <div class="stat">
-            <span class="label">Win Rate</span>
-            <span id="win-rate" class="stat-value">—</span>
-          </div>
-          <div class="stat">
-            <span class="label">Wins / Losses</span>
-            <span id="win-loss" class="stat-value">—</span>
-          </div>
-          <div class="stat">
-            <span class="label">Open Trades</span>
-            <span id="open-trades" class="stat-value">0</span>
-          </div>
-          <div class="stat">
-            <span class="label">Total PnL</span>
-            <span id="total-pnl" class="stat-value">—</span>
-          </div>
-        </div>
-        <div class="backtest-box">
-          <div class="backtest-header">
-            <span>Backtest (Yahoo / MT5 history)</span>
-            <button id="run-backtest" class="btn-small">Re-run</button>
-          </div>
-          <div id="backtest-result" class="muted">Loading backtest…</div>
-        </div>
-      </section>
-
-      <section class="card chart-card">
-        <h2>Price Chart</h2>
-        <canvas id="price-chart"></canvas>
-      </section>
-
-      <section class="card history-card">
-        <h2>Signal History</h2>
-        <div id="history" class="history-list">
-          <p class="muted">Waiting for signals…</p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer muted">
-      Signals are for educational purposes only. Not financial advice. Paper trade before risking real capital.
-    </footer>
-  </div>
-
-  <script src="app.js?v=3"></script>
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/app">Live App</a>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/about">About</a>
+      <a href="/disclaimer">Disclaimer</a>
+    </nav>
+    <p>© 2026 Trading Bots Live · trading-bots.live · Educational use only · Not financial advice</p>
+  </footer>
 </body>
 </html>
