@@ -4,7 +4,7 @@
  */
 window.SITE_CONFIG = {
   // Google Analytics 4 — https://analytics.google.com → Admin → Data Streams → Measurement ID
-  gaMeasurementId: '',
+  gaMeasurementId: 'G-KJ4JR55T6Z',
 
   // PropellerAds — https://propellerads.com (fast approval)
   propellerAds: {
