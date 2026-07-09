@@ -1,0 +1,19 @@
+{
+  "name": "gold-signal-bot",
+  "version": "1.0.0",
+  "description": "XAU/USD short-term trading signal dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "setup": "node scripts/setup-mt5.js",
+    "backtest": "node scripts/run-backtest.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1",
+    "technicalindicators": "^3.1.0"
+  }
+}

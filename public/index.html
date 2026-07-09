@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold Signal Bot — XAUUSD</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-left">
+        <h1>Gold Signal Bot</h1>
+        <span class="symbol">XAUUSD · M15</span>
+      </div>
+      <div class="header-right">
+        <button id="notify-btn" class="btn-notify" type="button" title="Enable desktop alerts">🔔 Alerts</button>
+        <span id="mode-badge" class="badge badge-live">LIVE</span>
+        <span id="source-label" class="muted">—</span>
+        <span id="last-update" class="muted">—</span>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card signal-card">
+        <div class="signal-header">
+          <span class="label">Current Signal</span>
+          <span id="confidence" class="confidence">—</span>
+        </div>
+        <div id="signal-display" class="signal hold">HOLD</div>
+
+        <div class="probability-panel">
+          <div class="prob-row">
+            <div class="prob-label">
+              <span class="prob-name buy-text">BUY</span>
+              <span id="buy-prob" class="prob-value">50%</span>
+            </div>
+            <div class="prob-bar-track">
+              <div id="buy-bar" class="prob-bar buy-bar" style="width:50%"></div>
+            </div>
+          </div>
+          <div class="prob-row">
+            <div class="prob-label">
+              <span class="prob-name sell-text">SELL</span>
+              <span id="sell-prob" class="prob-value">50%</span>
+            </div>
+            <div class="prob-bar-track">
+              <div id="sell-bar" class="prob-bar sell-bar" style="width:50%"></div>
+            </div>
+          </div>
+          <div class="prob-meta">
+            <span id="confluence">Confluence: —</span>
+            <span id="threshold-note">Signal fires at 75%+ (balanced)</span>
+          </div>
+        </div>
+
+        <div class="price-row">
+          <div>
+            <span class="label">Price</span>
+            <span id="price" class="price">—</span>
+          </div>
+          <div>
+            <span class="label">Hold Time</span>
+            <span id="hold-time" class="value">15–30 min</span>
+          </div>
+        </div>
+        <div class="levels">
+          <div class="level">
+            <span class="label">Entry</span>
+            <span id="entry" class="value">—</span>
+          </div>
+          <div class="level sl">
+            <span class="label">Stop Loss</span>
+            <span id="sl" class="value">—</span>
+          </div>
+          <div class="level tp">
+            <span class="label">Take Profit</span>
+            <span id="tp" class="value">—</span>
+          </div>
+        </div>
+        <ul id="reasons" class="reasons"></ul>
+      </section>
+
+      <section class="card indicators-card">
+        <h2>Indicators</h2>
+        <div class="indicator-grid">
+          <div class="indicator">
+            <span class="label">RSI (14)</span>
+            <span id="rsi" class="value">—</span>
+          </div>
+          <div class="indicator">
+            <span class="label">EMA 9 / 21</span>
+            <span id="ema" class="value">—</span>
+          </div>
+          <div class="indicator">
+            <span class="label">ATR (14)</span>
+            <span id="atr" class="value">—</span>
+          </div>
+          <div class="indicator">
+            <span class="label">ADX</span>
+            <span id="adx" class="value">—</span>
+          </div>
+          <div class="indicator">
+            <span class="label">Trend</span>
+            <span id="trend" class="value">—</span>
+          </div>
+          <div class="indicator">
+            <span class="label">H1 Trend</span>
+            <span id="h1-trend" class="value">—</span>
+          </div>
+          <div class="indicator">
+            <span class="label">Session</span>
+            <span id="session" class="value">—</span>
+          </div>
+        </div>
+        <div id="news-status" class="news-status clear">News: Clear</div>
+      </section>
+
+      <section class="card stats-card">
+        <h2>Live Accuracy</h2>
+        <div class="stats-grid">
+          <div class="stat">
+            <span class="label">Win Rate</span>
+            <span id="win-rate" class="stat-value">—</span>
+          </div>
+          <div class="stat">
+            <span class="label">Wins / Losses</span>
+            <span id="win-loss" class="stat-value">—</span>
+          </div>
+          <div class="stat">
+            <span class="label">Open Trades</span>
+            <span id="open-trades" class="stat-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="label">Total PnL</span>
+            <span id="total-pnl" class="stat-value">—</span>
+          </div>
+        </div>
+        <div class="backtest-box">
+          <div class="backtest-header">
+            <span>Backtest (Yahoo / MT5 history)</span>
+            <button id="run-backtest" class="btn-small">Re-run</button>
+          </div>
+          <div id="backtest-result" class="muted">Loading backtest…</div>
+        </div>
+      </section>
+
+      <section class="card chart-card">
+        <h2>Price Chart</h2>
+        <canvas id="price-chart"></canvas>
+      </section>
+
+      <section class="card history-card">
+        <h2>Signal History</h2>
+        <div id="history" class="history-list">
+          <p class="muted">Waiting for signals…</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer muted">
+      Signals are for educational purposes only. Not financial advice. Paper trade before risking real capital.
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
