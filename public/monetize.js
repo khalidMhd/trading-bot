@@ -17,6 +17,45 @@
     gtag('config', id, { anonymize_ip: true });
   }
 
+  function isAdAllowedPage() {
+    const path = window.location.pathname.replace(/\/$/, '') || '/';
+    return !['/app', '/privacy', '/disclaimer'].includes(path);
+  }
+
+  function loadAdSenseScript(clientId) {
+    if (document.querySelector('script[src*="adsbygoogle.js"]')) return;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${clientId}`;
+    s.crossOrigin = 'anonymous';
+    document.head.appendChild(s);
+  }
+
+  function initAdSense() {
+    const ads = cfg.adsense;
+    if (!ads?.enabled || !ads.clientId?.startsWith('ca-pub-')) return;
+    if (!isAdAllowedPage()) return;
+
+    loadAdSenseScript(ads.clientId);
+
+    document.querySelectorAll('.ad-slot[data-zone]').forEach((el) => {
+      const key = el.getAttribute('data-zone');
+      const slotId = ads.slots?.[key];
+      if (!slotId) return;
+
+      const ins = document.createElement('ins');
+      ins.className = 'adsbygoogle';
+      ins.style.display = 'block';
+      ins.setAttribute('data-ad-client', ads.clientId);
+      ins.setAttribute('data-ad-slot', slotId);
+      ins.setAttribute('data-ad-format', 'auto');
+      ins.setAttribute('data-full-width-responsive', 'true');
+      el.appendChild(ins);
+      el.classList.add('ad-loaded');
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    });
+  }
+
   function injectPropellerZone(el, scriptSrc) {
     if (!scriptSrc || !cfg.propellerAds?.enabled) return;
     const script = document.createElement('script');
@@ -54,7 +93,8 @@
   }
 
   function initCookieNotice() {
-    if (!cfg.gaMeasurementId && !cfg.propellerAds?.enabled) return;
+    const hasAds = cfg.propellerAds?.enabled || cfg.adsense?.enabled;
+    if (!cfg.gaMeasurementId && !hasAds) return;
     if (localStorage.getItem('tbl-cookie-ok')) return;
 
     const bar = document.createElement('div');
@@ -87,6 +127,7 @@
   }
 
   initAnalytics();
+  initAdSense();
   initAdSlots();
   renderAffiliateSlots();
   initCookieNotice();

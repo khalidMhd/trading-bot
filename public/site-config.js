@@ -6,6 +6,16 @@ window.SITE_CONFIG = {
   // Google Analytics 4 — https://analytics.google.com → Admin → Data Streams → Measurement ID
   gaMeasurementId: 'G-KJ4JR55T6Z',
 
+  // Google AdSense — https://adsense.google.com
+  adsense: {
+    enabled: true,
+    clientId: 'ca-pub-9250909224692232',
+    slots: {
+      top: '', // Ad unit slot ID after approval (Display ad → top banner)
+      mid: '', // Ad unit slot ID (homepage mid banner)
+    },
+  },
+
   // PropellerAds — https://propellerads.com (fast approval)
   propellerAds: {
     enabled: false,
