@@ -6,23 +6,43 @@
   <link rel="icon" href="/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="/logo.png" />
   <title>Gold &amp; XAUUSD News, Guides &amp; Updates | Trading Bots Live</title>
-  <meta name="description" content="Free gold trading news, XAUUSD guides, M15 strategy tips, and platform updates. Learn, paper trade, and use live signals on Trading Bots Live." />
-  <meta name="keywords" content="gold trading news, XAUUSD updates, gold trading tips, forex gold guides, trading bots live news" />
+  <meta name="description" content="Free gold trading news, live XAUUSD headlines, guides, M15 strategy tips, and platform updates. Attract traders with news, education, and our free signal bot." />
+  <meta name="keywords" content="gold trading news, XAUUSD news today, gold price news, forex gold guides, XAUUSD signals, trading bots live" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://trading-bots.live/news" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Gold Trading News &amp; Guides | Trading Bots Live" />
-  <meta property="og:description" content="Market tips, education, strategy guides, and platform updates for XAUUSD traders." />
+  <meta property="og:description" content="Live gold headlines, market tips, education, and XAUUSD strategy guides." />
   <meta property="og:url" content="https://trading-bots.live/news" />
   <meta property="og:image" content="https://trading-bots.live/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gold &amp; XAUUSD News | Trading Bots Live" />
+  <meta name="twitter:description" content="Live headlines and free gold trading guides." />
   <link rel="stylesheet" href="/site.css" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9250909224692232" crossorigin="anonymous"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Trading Bots Live News",
-    "url": "https://trading-bots.live/news",
-    "description": "Gold and XAUUSD trading news, guides, and updates.",
-    "publisher": { "@type": "Organization", "name": "Trading Bots Live" }
+    "@graph": [
+      {
+        "@type": "Blog",
+        "name": "Trading Bots Live News",
+        "url": "https://trading-bots.live/news",
+        "description": "Gold and XAUUSD trading news, live headlines, and educational guides.",
+        "publisher": { "@type": "Organization", "name": "Trading Bots Live", "url": "https://trading-bots.live/" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Gold Trading Guides",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "url": "https://trading-bots.live/news/gold-price-drivers-xauusd", "name": "What Moves Gold Price" },
+          { "@type": "ListItem", "position": 2, "url": "https://trading-bots.live/news/paper-trading-gold-7-day-guide", "name": "7-Day Paper Trading Challenge" },
+          { "@type": "ListItem", "position": 3, "url": "https://trading-bots.live/news/free-vs-paid-gold-signals", "name": "Free vs Paid Gold Signals" },
+          { "@type": "ListItem", "position": 4, "url": "https://trading-bots.live/news/best-times-trade-gold", "name": "Best Times to Trade Gold" },
+          { "@type": "ListItem", "position": 5, "url": "https://trading-bots.live/news/how-to-read-xauusd-signals", "name": "How to Read XAUUSD Signals" }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -73,6 +93,16 @@
       </div>
     </section>
 
+    <section class="live-headlines" aria-label="Live market headlines">
+      <div class="live-headlines-header">
+        <h2>● Live Gold &amp; Forex Headlines</h2>
+        <span id="feed-updated" class="feed-updated"></span>
+      </div>
+      <p class="feed-disclaimer">Curated from Google News, Investing.com, FXStreet &amp; Yahoo Finance — external links, refreshed every 15 min.</p>
+      <div id="feed-list" class="feed-list" data-limit="12"></div>
+    </section>
+
+    <h2 class="guides-preview" style="font-size:1.25rem;margin:2rem 0 1rem;text-align:left">Our Guides &amp; Updates</h2>
     <div id="news-filters" class="news-filters" role="tablist" aria-label="Filter articles"></div>
     <div id="news-grid" class="news-grid"></div>
 
@@ -101,6 +131,7 @@
   <script src="/site-config.js"></script>
   <script src="/news-data.js"></script>
   <script src="/news.js"></script>
+  <script src="/news-feed.js"></script>
   <script src="/monetize.js"></script>
 </body>
 </html>

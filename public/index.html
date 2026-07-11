@@ -6,8 +6,8 @@
   <link rel="icon" href="/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="/logo.png" />
   <title>Trading Bots Live — Free XAUUSD Gold Signal Bot</title>
-  <meta name="description" content="Free live XAUUSD gold signals for M15 trades. BUY/SELL probability, SL/TP levels, and 8-indicator confluence. Paper trade free on Trading Bots Live." />
-  <meta name="keywords" content="gold trading bot, XAUUSD signals, gold signal bot, trading bots live, forex gold signals, M15 gold strategy" />
+  <meta name="description" content="Free live XAUUSD gold signals, trading news, guides &amp; headlines. M15 BUY/SELL bot, probability scoring, SL/TP — paper trade on Trading Bots Live." />
+  <meta name="keywords" content="gold trading bot, XAUUSD signals, gold news today, gold signal bot, XAUUSD news, forex gold signals, M15 gold strategy, free gold trading tools" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://trading-bots.live/" />
   <meta property="og:type" content="website" />
@@ -24,13 +24,34 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Trading Bots Live — Gold Signal Bot",
-    "url": "https://trading-bots.live/",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Web",
-    "description": "Live XAUUSD gold trading signal dashboard with probability-based BUY/SELL alerts for 15–30 minute trades.",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Trading Bots Live",
+        "url": "https://trading-bots.live/",
+        "logo": "https://trading-bots.live/logo.png",
+        "description": "Free XAUUSD gold trading signals, news, and educational guides."
+      },
+      {
+        "@type": "WebSite",
+        "name": "Trading Bots Live",
+        "url": "https://trading-bots.live/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://trading-bots.live/news?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Trading Bots Live — Gold Signal Bot",
+        "url": "https://trading-bots.live/app",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "description": "Live XAUUSD gold trading signal dashboard with probability-based BUY/SELL alerts for 15–30 minute trades.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    ]
   }
   </script>
 </head>
@@ -97,6 +118,33 @@
       </article>
     </section>
 
+    <section class="home-headlines-teaser live-headlines" aria-label="Latest gold headlines">
+      <div class="live-headlines-header">
+        <h2>● Latest Gold Headlines</h2>
+        <a href="/news" style="font-size:0.85rem">All news &amp; guides →</a>
+      </div>
+      <div id="feed-list" class="feed-list feed-compact" data-limit="5"></div>
+    </section>
+
+    <section class="guides-preview" aria-label="Popular guides">
+      <h2>Free Gold Trading Guides</h2>
+      <div class="guides-preview-grid">
+        <article class="guide-preview-card">
+          <h3><a href="/news/gold-price-drivers-xauusd">What Moves Gold Price?</a></h3>
+          <p>7 XAUUSD drivers: dollar, Fed, inflation, geopolitics, and more.</p>
+        </article>
+        <article class="guide-preview-card">
+          <h3><a href="/news/paper-trading-gold-7-day-guide">7-Day Paper Trading Challenge</a></h3>
+          <p>Day-by-day plan to practice gold signals with zero risk.</p>
+        </article>
+        <article class="guide-preview-card">
+          <h3><a href="/news/free-vs-paid-gold-signals">Free vs Paid Signal Groups</a></h3>
+          <p>Honest comparison of Telegram VIP gold channels vs free tools.</p>
+        </article>
+      </div>
+      <p style="text-align:center;margin-top:1rem"><a href="/news">View all news &amp; guides →</a></p>
+    </section>
+
     <div class="ad-slot" data-zone="mid" aria-label="Advertisement"></div>
 
     <div class="affiliate-slot" aria-label="Partner offer"></div>
@@ -122,6 +170,7 @@
   </footer>
 
   <script src="/site-config.js"></script>
+  <script src="/news-feed.js"></script>
   <script src="/monetize.js"></script>
 </body>
 </html>

@@ -48,5 +48,17 @@ module.exports = (getContext) => {
     }
   });
 
+  router.get('/news-feed', async (req, res) => {
+    try {
+      const { getNewsHeadlines } = require('../services/newsFeed');
+      const limit = Math.min(parseInt(req.query.limit, 10) || 15, 25);
+      const data = await getNewsHeadlines(limit);
+      res.setHeader('Cache-Control', 'public, max-age=900');
+      res.json(data);
+    } catch (err) {
+      res.status(500).json({ error: err.message, items: [] });
+    }
+  });
+
   return router;
 };

@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /news
+Allow: /news/
 
 Sitemap: https://trading-bots.live/sitemap.xml

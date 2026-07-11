@@ -1,6 +1,33 @@
 /** Article registry — add new posts here and create matching HTML in /news/ */
 window.NEWS_ARTICLES = [
   {
+    slug: 'gold-price-drivers-xauusd',
+    title: 'What Moves Gold Price? 7 XAUUSD Drivers Every Trader Should Know',
+    excerpt: 'USD, real yields, Fed policy, inflation, geopolitics, and risk sentiment — how each factor pushes XAUUSD up or down.',
+    category: 'market',
+    categoryLabel: 'Market Tips',
+    date: '2026-07-11',
+    readMin: 6,
+  },
+  {
+    slug: 'paper-trading-gold-7-day-guide',
+    title: '7-Day Gold Paper Trading Challenge (XAUUSD)',
+    excerpt: 'A simple day-by-day plan to practice gold trades with zero risk. Use free signals, track results, and build discipline.',
+    category: 'education',
+    categoryLabel: 'Education',
+    date: '2026-07-10',
+    readMin: 7,
+  },
+  {
+    slug: 'free-vs-paid-gold-signals',
+    title: 'Free vs Paid Gold Signal Groups — Honest 2026 Comparison',
+    excerpt: 'Telegram VIP channels vs free web dashboards. What you actually get, hidden costs, and how to test signals safely.',
+    category: 'strategy',
+    categoryLabel: 'Strategy',
+    date: '2026-07-09',
+    readMin: 6,
+  },
+  {
     slug: 'best-times-trade-gold',
     title: 'Best Times to Trade Gold (XAUUSD) — Session Guide',
     excerpt: 'London, New York, and Asian session windows explained. When gold moves most and how to align M15 signals with liquidity.',
