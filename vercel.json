@@ -22,6 +22,7 @@
     { "src": "/disclaimer", "dest": "/public/disclaimer.html" },
     { "src": "/privacy", "dest": "/public/privacy.html" },
     { "src": "/BingSiteAuth.xml", "dest": "/public/BingSiteAuth.xml" },
+    { "src": "/logo.png", "dest": "/public/logo.png" },
     { "src": "/ads.txt", "dest": "/public/ads.txt" },
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
     { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
