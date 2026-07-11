@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const http = require('http');
+const fs = require('fs');
 const { Server } = require('socket.io');
 const path = require('path');
 const config = require('./config');
@@ -18,6 +19,7 @@ app.use(express.json());
 
 const pageRoutes = {
   '/app': 'app.html',
+  '/news': 'news.html',
   '/about': 'about.html',
   '/how-it-works': 'how-it-works.html',
   '/disclaimer': 'disclaimer.html',
@@ -27,6 +29,15 @@ Object.entries(pageRoutes).forEach(([route, file]) => {
   app.get(route, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', file));
   });
+});
+
+app.get('/news/:slug', (req, res) => {
+  const file = path.join(__dirname, 'public', 'news', `${req.params.slug}.html`);
+  if (fs.existsSync(file)) {
+    res.sendFile(file);
+  } else {
+    res.status(404).send('Article not found');
+  }
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
