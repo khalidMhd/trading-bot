@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Free Gold Trading Calculators — Position Size, Profit &amp; Risk | Trading Bots Live</title>
+  <meta name="description" content="Free XAUUSD trading calculators: position size, profit/loss, risk-to-reward, and a live market session clock. Plan gold trades and manage risk in seconds." />
+  <meta name="keywords" content="gold position size calculator, XAUUSD profit calculator, forex risk calculator, gold pip calculator, market session clock, risk reward calculator" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://trading-bots.live/tools" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free Gold Trading Calculators (XAUUSD)" />
+  <meta property="og:description" content="Position size, profit/loss, and risk-to-reward calculators plus a live market session clock for gold traders." />
+  <meta property="og:url" content="https://trading-bots.live/tools" />
+  <meta property="og:image" content="https://trading-bots.live/logo.png" />
+  <link rel="stylesheet" href="/site.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9250909224692232" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Gold Trading Calculators","url":"https://trading-bots.live/tools","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free position size, profit/loss, and risk-to-reward calculators for XAUUSD gold trading."}
+  </script>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="site-logo"><img src="/logo.png" alt="" class="site-logo-img" width="32" height="32" />Trading Bots <span class="live-dot">Live</span></a>
+    <div class="site-links">
+      <a href="/app">Live App</a>
+      <a href="/tools" class="active">Tools</a>
+      <a href="/news">News</a>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/about">About</a>
+    </div>
+  </nav>
+
+  <div class="ad-slot" data-zone="top" aria-label="Advertisement"></div>
+
+  <main class="site-wrap">
+    <section class="news-hero">
+      <h1>Free <span>Gold Trading</span> Calculators</h1>
+      <p class="news-hero-lead">
+        Plan every XAUUSD trade before you take it. Size positions correctly, project profit and loss,
+        and check your risk-to-reward — plus see which market session is live right now.
+      </p>
+    </section>
+
+    <!-- Live session clock -->
+    <section class="tool-card" aria-label="Market session clock">
+      <h2>🕒 Live Market Session Clock</h2>
+      <p class="tool-sub">Gold moves most when major sessions overlap. Here's what's open right now (your local time).</p>
+      <div id="session-clock" class="session-clock">
+        <div class="session-box" data-session="sydney"><span class="session-name">Sydney</span><span class="session-state">—</span></div>
+        <div class="session-box" data-session="tokyo"><span class="session-name">Tokyo</span><span class="session-state">—</span></div>
+        <div class="session-box" data-session="london"><span class="session-name">London</span><span class="session-state">—</span></div>
+        <div class="session-box" data-session="newyork"><span class="session-name">New York</span><span class="session-state">—</span></div>
+      </div>
+      <p id="session-tip" class="session-tip"></p>
+    </section>
+
+    <!-- Position size calculator -->
+    <section class="tool-card" aria-label="Position size calculator">
+      <h2>📐 Position Size Calculator</h2>
+      <p class="tool-sub">Find the correct lot size so you never risk more than you intend on a gold trade.</p>
+      <div class="tool-grid">
+        <label>Account balance ($)
+          <input type="number" id="ps-balance" value="1000" min="0" step="any" />
+        </label>
+        <label>Risk per trade (%)
+          <input type="number" id="ps-risk" value="1" min="0" step="any" />
+        </label>
+        <label>Entry price ($)
+          <input type="number" id="ps-entry" value="2400" min="0" step="any" />
+        </label>
+        <label>Stop loss price ($)
+          <input type="number" id="ps-stop" value="2390" min="0" step="any" />
+        </label>
+        <label>Contract size (oz/lot)
+          <input type="number" id="ps-contract" value="100" min="1" step="any" />
+        </label>
+      </div>
+      <button type="button" class="btn-primary" id="ps-calc">Calculate position size</button>
+      <div id="ps-result" class="tool-result" hidden></div>
+    </section>
+
+    <!-- Profit / loss calculator -->
+    <section class="tool-card" aria-label="Profit and loss calculator">
+      <h2>💰 Profit &amp; Loss Calculator</h2>
+      <p class="tool-sub">See how much a gold trade makes or loses before you take it.</p>
+      <div class="tool-grid">
+        <label>Direction
+          <select id="pl-dir">
+            <option value="buy">Buy (Long)</option>
+            <option value="sell">Sell (Short)</option>
+          </select>
+        </label>
+        <label>Lot size
+          <input type="number" id="pl-lots" value="0.10" min="0" step="any" />
+        </label>
+        <label>Entry price ($)
+          <input type="number" id="pl-entry" value="2400" min="0" step="any" />
+        </label>
+        <label>Exit price ($)
+          <input type="number" id="pl-exit" value="2415" min="0" step="any" />
+        </label>
+        <label>Contract size (oz/lot)
+          <input type="number" id="pl-contract" value="100" min="1" step="any" />
+        </label>
+      </div>
+      <button type="button" class="btn-primary" id="pl-calc">Calculate P/L</button>
+      <div id="pl-result" class="tool-result" hidden></div>
+    </section>
+
+    <div class="ad-slot" data-zone="mid" aria-label="Advertisement"></div>
+
+    <!-- Risk / reward calculator -->
+    <section class="tool-card" aria-label="Risk to reward calculator">
+      <h2>⚖️ Risk-to-Reward Calculator</h2>
+      <p class="tool-sub">Check whether a setup is worth taking. Aim for 1:1.5 or better.</p>
+      <div class="tool-grid">
+        <label>Direction
+          <select id="rr-dir">
+            <option value="buy">Buy (Long)</option>
+            <option value="sell">Sell (Short)</option>
+          </select>
+        </label>
+        <label>Entry price ($)
+          <input type="number" id="rr-entry" value="2400" min="0" step="any" />
+        </label>
+        <label>Stop loss ($)
+          <input type="number" id="rr-stop" value="2390" min="0" step="any" />
+        </label>
+        <label>Take profit ($)
+          <input type="number" id="rr-tp" value="2420" min="0" step="any" />
+        </label>
+      </div>
+      <button type="button" class="btn-primary" id="rr-calc">Calculate risk-to-reward</button>
+      <div id="rr-result" class="tool-result" hidden></div>
+    </section>
+
+    <div class="prose" style="margin-top:2.5rem">
+      <h2>How to use these calculators</h2>
+      <p>These free tools are designed to be used together as part of a disciplined trading routine. Start with the <strong>Position Size Calculator</strong>: enter your account balance, the percentage you are willing to risk (1% is a sensible default), and your planned entry and stop-loss prices. The calculator returns the exact lot size that keeps your risk within your limit — removing the guesswork that leads most beginners to over-trade.</p>
+      <p>Next, use the <strong>Risk-to-Reward Calculator</strong> to confirm the setup is worth taking. A ratio of 1:1.5 or higher means your potential reward outweighs your risk, which allows you to be profitable even if you win fewer than half your trades. Finally, the <strong>Profit &amp; Loss Calculator</strong> lets you preview the dollar outcome of a trade at different exit prices, so there are no surprises.</p>
+      <p>All calculations assume a standard gold contract of 100 ounces per lot, where a $1 move in price equals $100 profit or loss per full lot. Because some brokers use different contract sizes, every calculator lets you adjust this value. Always confirm the exact specification with your own broker. To understand the theory behind position sizing and stops in depth, read our <a href="/news/gold-risk-management-guide">gold risk management guide</a>, and to see live trade ideas with ready-made entry, stop, and target levels, open the <a href="/app">Gold Signal Bot</a>.</p>
+      <div class="article-disclaimer">These calculators are educational tools provided for convenience. Results are estimates only and depend on your broker's contract specifications, spreads, swaps, and execution. Nothing here is financial advice. Trading gold carries substantial risk of loss.</div>
+    </div>
+
+    <div class="affiliate-slot" aria-label="Partner offer"></div>
+
+    <section class="cta-box">
+      <h2>Turn your plan into live trades</h2>
+      <p>Get BUY/SELL signals with entry, stop, and target already calculated — free.</p>
+      <a href="/app" class="btn-primary">Open Gold Signal Bot</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/app">Live App</a>
+      <a href="/tools">Tools</a>
+      <a href="/news">News</a>
+      <a href="/glossary">Glossary</a>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/about">About</a>
+      <a href="/disclaimer">Disclaimer</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p>© 2026 Trading Bots Live · Educational use only · Not financial advice</p>
+  </footer>
+
+  <script src="/site-config.js"></script>
+  <script src="/tools.js"></script>
+  <script src="/monetize.js"></script>
+</body>
+</html>

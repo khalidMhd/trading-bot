@@ -20,6 +20,8 @@ app.use(express.json());
 const pageRoutes = {
   '/app': 'app.html',
   '/news': 'news.html',
+  '/tools': 'tools.html',
+  '/glossary': 'glossary.html',
   '/about': 'about.html',
   '/how-it-works': 'how-it-works.html',
   '/disclaimer': 'disclaimer.html',
