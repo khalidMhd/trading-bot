@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Pivot Point Calculator — Standard &amp; Fibonacci (Forex/Gold) | Trading Bots Live</title>
+  <meta name="description" content="Free pivot point calculator for forex and gold. Enter high, low and close to get pivot, support (S1-S3) and resistance (R1-R3) levels using Standard or Fibonacci methods." />
+  <meta name="keywords" content="pivot point calculator, forex pivot calculator, gold pivot points, standard pivot points, fibonacci pivot points, support resistance calculator, XAUUSD pivot" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://trading-bots.live/pivot-calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pivot Point Calculator (Standard &amp; Fibonacci)" />
+  <meta property="og:description" content="Get pivot, support and resistance levels for forex and gold from high, low and close." />
+  <meta property="og:url" content="https://trading-bots.live/pivot-calculator" />
+  <meta property="og:image" content="https://trading-bots.live/logo.png" />
+  <link rel="stylesheet" href="/site.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9250909224692232" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Pivot Point Calculator","url":"https://trading-bots.live/pivot-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free pivot point calculator for forex and gold using Standard and Fibonacci methods."}
+  </script>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="site-logo"><img src="/logo.png" alt="" class="site-logo-img" width="32" height="32" />Trading Bots <span class="live-dot">Live</span></a>
+    <div class="site-links">
+      <a href="/app">Live App</a>
+      <a href="/tools">Tools</a>
+      <a href="/pivot-calculator" class="active">Pivot Calculator</a>
+      <a href="/news">News</a>
+      <a href="/how-it-works">How It Works</a>
+    </div>
+  </nav>
+
+  <div class="ad-slot" data-zone="top" aria-label="Advertisement"></div>
+
+  <main class="site-wrap">
+    <header class="page-header">
+      <h1>Pivot Point Calculator</h1>
+      <p>Enter the previous period's high, low and close to get pivot, support and resistance levels for gold or any forex pair.</p>
+    </header>
+
+    <section class="tool-card" aria-label="Pivot point calculator">
+      <div class="tool-grid">
+        <label>High
+          <input type="number" id="pv-high" value="2415" min="0" step="any" />
+        </label>
+        <label>Low
+          <input type="number" id="pv-low" value="2385" min="0" step="any" />
+        </label>
+        <label>Close
+          <input type="number" id="pv-close" value="2400" min="0" step="any" />
+        </label>
+        <label>Method
+          <select id="pv-method">
+            <option value="standard">Standard (Classic)</option>
+            <option value="fibonacci">Fibonacci</option>
+          </select>
+        </label>
+      </div>
+      <button type="button" class="btn-primary" id="pv-calc">Calculate pivot points</button>
+      <div class="calc-levels" id="pv-result" hidden></div>
+    </section>
+
+    <div class="ad-slot" data-zone="mid" aria-label="Advertisement"></div>
+
+    <div class="prose">
+      <h2>What are pivot points?</h2>
+      <p><strong>Pivot points</strong> are horizontal price levels that traders use to identify potential support and resistance. They are calculated from the previous period's high, low, and close, which makes them completely objective — every trader looking at the same data sees the same levels. That shared visibility is part of what gives them power: when many traders watch the same level, price often reacts there. Pivot points are especially popular with day traders on gold and forex because they provide a ready-made map of levels for the session ahead.</p>
+
+      <h2>How to read the levels</h2>
+      <p>The central <strong>pivot (PP)</strong> is the primary reference. When price trades above it, sentiment is generally bullish; below it, bearish. The <strong>resistance levels (R1, R2, R3)</strong> above and <strong>support levels (S1, S2, S3)</strong> below mark where price may stall or reverse. Traders commonly look for bounces or rejections at these levels, or for breakouts through them. For example, a move up to R1 that stalls and reverses is a classic short setup; a decisive break above R1 suggests a push toward R2.</p>
+
+      <h2>Standard vs Fibonacci pivots</h2>
+      <p>This calculator offers two popular methods. <strong>Standard (Classic)</strong> pivots use simple arithmetic and are the most widely followed. <strong>Fibonacci</strong> pivots apply Fibonacci ratios (38.2%, 61.8%, 100%) to the previous range when placing the support and resistance levels, which some traders prefer because they blend pivot logic with Fibonacci's natural retracement levels. Neither is "better" — many traders simply pick one and stay consistent. To go deeper on Fibonacci itself, try our <a href="/fibonacci-calculator">Fibonacci calculator</a>.</p>
+
+      <h2>Using pivots with the rest of your analysis</h2>
+      <p>Pivot points work best as one layer of confluence, not a standalone system. A pivot level that lines up with a moving average, a round number, or a signal from our <a href="/app">gold dashboard</a> is far more reliable than a pivot alone. Combine them with the eight factors in our <a href="/simulator">confluence simulator</a>, and always protect every trade with a stop and correct <a href="/tools">position sizing</a>.</p>
+
+      <div class="article-disclaimer">This calculator is an educational tool. Pivot points indicate potential — not guaranteed — support and resistance. Nothing here is financial advice. Trading carries a substantial risk of loss.</div>
+    </div>
+
+    <div class="affiliate-slot" aria-label="Partner offer"></div>
+
+    <section class="cta-box">
+      <h2>See live gold levels &amp; signals</h2>
+      <a href="/app" class="btn-primary">Open Gold Signal Bot</a>
+    </section>
+
+    <section class="article-related">
+      <h2>More free tools</h2>
+      <ul>
+        <li><a href="/tools">Position Size &amp; Profit Calculators</a></li>
+        <li><a href="/fibonacci-calculator">Fibonacci Calculator</a></li>
+        <li><a href="/simulator">Confluence Simulator</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/app">Live App</a>
+      <a href="/tools">Tools</a>
+      <a href="/pivot-calculator">Pivot Calculator</a>
+      <a href="/fibonacci-calculator">Fibonacci Calculator</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p>© 2026 Trading Bots Live · Educational use only · Not financial advice</p>
+  </footer>
+
+  <script>
+  (function () {
+    function num(id) { var v = parseFloat(document.getElementById(id).value); return Number.isFinite(v) ? v : NaN; }
+    function f(n) { return n.toLocaleString('en-US', { maximumFractionDigits: 3 }); }
+
+    document.getElementById('pv-calc').addEventListener('click', function () {
+      var high = num('pv-high'), low = num('pv-low'), close = num('pv-close');
+      var method = document.getElementById('pv-method').value;
+      var res = document.getElementById('pv-result');
+
+      if ([high, low, close].some(Number.isNaN) || high < low) {
+        res.hidden = false;
+        res.className = 'calc-levels calc-bad';
+        res.innerHTML = 'Please enter valid numbers (High must be greater than or equal to Low).';
+        return;
+      }
+
+      var pp = (high + low + close) / 3;
+      var range = high - low;
+      var levels;
+
+      if (method === 'fibonacci') {
+        levels = [
+          ['R3', pp + range * 1.000, 'res'],
+          ['R2', pp + range * 0.618, 'res'],
+          ['R1', pp + range * 0.382, 'res'],
+          ['PP', pp, 'pp'],
+          ['S1', pp - range * 0.382, 'sup'],
+          ['S2', pp - range * 0.618, 'sup'],
+          ['S3', pp - range * 1.000, 'sup'],
+        ];
+      } else {
+        var r1 = 2 * pp - low, s1 = 2 * pp - high;
+        var r2 = pp + range, s2 = pp - range;
+        var r3 = high + 2 * (pp - low), s3 = low - 2 * (high - pp);
+        levels = [
+          ['R3', r3, 'res'], ['R2', r2, 'res'], ['R1', r1, 'res'],
+          ['PP', pp, 'pp'],
+          ['S1', s1, 'sup'], ['S2', s2, 'sup'], ['S3', s3, 'sup'],
+        ];
+      }
+
+      res.hidden = false;
+      res.className = 'calc-levels';
+      res.innerHTML = levels.map(function (l) {
+        return '<div class="calc-level calc-' + l[2] + '"><span>' + l[0] + '</span><strong>' + f(l[1]) + '</strong></div>';
+      }).join('');
+    });
+
+    document.getElementById('pv-calc').click();
+  })();
+  </script>
+  <script src="/nav.js"></script>
+  <script src="/footer.js"></script>
+  <script src="/site-config.js"></script>
+  <script src="/monetize.js"></script>
+</body>
+</html>

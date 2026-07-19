@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Fibonacci Calculator — Retracement &amp; Extension Levels (Forex/Gold) | Trading Bots Live</title>
+  <meta name="description" content="Free Fibonacci calculator for forex and gold. Enter swing high and low to get retracement (23.6%, 38.2%, 50%, 61.8%, 78.6%) and extension levels for XAUUSD." />
+  <meta name="keywords" content="fibonacci calculator, fibonacci retracement calculator, fib levels, forex fibonacci, gold fibonacci, fibonacci extension calculator, XAUUSD fibonacci" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://trading-bots.live/fibonacci-calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fibonacci Calculator (Retracement &amp; Extension)" />
+  <meta property="og:description" content="Get Fibonacci retracement and extension levels for forex and gold from a swing high and low." />
+  <meta property="og:url" content="https://trading-bots.live/fibonacci-calculator" />
+  <meta property="og:image" content="https://trading-bots.live/logo.png" />
+  <link rel="stylesheet" href="/site.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9250909224692232" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Fibonacci Calculator","url":"https://trading-bots.live/fibonacci-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free Fibonacci retracement and extension calculator for forex and gold."}
+  </script>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="site-logo"><img src="/logo.png" alt="" class="site-logo-img" width="32" height="32" />Trading Bots <span class="live-dot">Live</span></a>
+    <div class="site-links">
+      <a href="/app">Live App</a>
+      <a href="/tools">Tools</a>
+      <a href="/fibonacci-calculator" class="active">Fibonacci Calculator</a>
+      <a href="/news">News</a>
+      <a href="/how-it-works">How It Works</a>
+    </div>
+  </nav>
+
+  <div class="ad-slot" data-zone="top" aria-label="Advertisement"></div>
+
+  <main class="site-wrap">
+    <header class="page-header">
+      <h1>Fibonacci Calculator</h1>
+      <p>Enter a swing high and low to instantly get Fibonacci retracement and extension levels for gold or any forex pair.</p>
+    </header>
+
+    <section class="tool-card" aria-label="Fibonacci calculator">
+      <div class="tool-grid">
+        <label>Swing High
+          <input type="number" id="fb-high" value="2450" min="0" step="any" />
+        </label>
+        <label>Swing Low
+          <input type="number" id="fb-low" value="2350" min="0" step="any" />
+        </label>
+        <label>Trend
+          <select id="fb-trend">
+            <option value="up">Uptrend (low → high)</option>
+            <option value="down">Downtrend (high → low)</option>
+          </select>
+        </label>
+      </div>
+      <button type="button" class="btn-primary" id="fb-calc">Calculate Fibonacci levels</button>
+
+      <div id="fb-result" hidden>
+        <h3 class="calc-subhead">Retracement levels</h3>
+        <div class="calc-levels" id="fb-retr"></div>
+        <h3 class="calc-subhead">Extension levels</h3>
+        <div class="calc-levels" id="fb-ext"></div>
+      </div>
+    </section>
+
+    <div class="ad-slot" data-zone="mid" aria-label="Advertisement"></div>
+
+    <div class="prose">
+      <h2>What is Fibonacci retracement?</h2>
+      <p><strong>Fibonacci retracement</strong> is one of the most widely used tools in technical analysis. It is based on ratios derived from the Fibonacci sequence — most importantly <strong>23.6%, 38.2%, 50%, 61.8%, and 78.6%</strong> — which appear throughout nature and, traders believe, in market behaviour too. After a strong move, price rarely travels in a straight line; it pulls back before continuing. Fibonacci levels estimate <em>how far</em> that pullback might go before the trend resumes, giving traders potential entry points in the direction of the trend.</p>
+
+      <h2>How to use the levels</h2>
+      <p>Identify a clear swing — a low to a high in an uptrend, or a high to a low in a downtrend — and enter those two prices above. The calculator plots the retracement levels between them. In an uptrend, traders watch for price to pull back to the <strong>38.2%, 50%, or 61.8%</strong> level and then show signs of resuming upward — a common, high-probability entry zone. The <strong>61.8% level</strong> (the "golden ratio") is the most closely watched of all. <strong>Extension levels</strong> (127.2%, 161.8%, 261.8%) project beyond the original move and are used as profit targets once a trend continues.</p>
+
+      <h2>Why Fibonacci works (and its limits)</h2>
+      <p>Part of Fibonacci's effectiveness is self-fulfilling: because so many traders place orders around the same levels, price genuinely tends to react there. But it is not magic. Levels are zones, not exact lines, and price can overshoot or ignore them entirely. That is why Fibonacci should never be used alone. It is most powerful as <strong>confluence</strong> — when a Fib level lines up with a moving average, a pivot point, or a signal from our <a href="/app">gold dashboard</a>. Explore that multi-factor thinking in our <a href="/simulator">confluence simulator</a>, and pair this tool with our <a href="/pivot-calculator">pivot point calculator</a>.</p>
+
+      <div class="article-disclaimer">This calculator is an educational tool. Fibonacci levels indicate potential — not guaranteed — reaction zones. Nothing here is financial advice. Trading carries a substantial risk of loss.</div>
+    </div>
+
+    <div class="affiliate-slot" aria-label="Partner offer"></div>
+
+    <section class="cta-box">
+      <h2>Combine Fib levels with live signals</h2>
+      <a href="/app" class="btn-primary">Open Gold Signal Bot</a>
+    </section>
+
+    <section class="article-related">
+      <h2>More free tools</h2>
+      <ul>
+        <li><a href="/pivot-calculator">Pivot Point Calculator</a></li>
+        <li><a href="/tools">Position Size &amp; Profit Calculators</a></li>
+        <li><a href="/simulator">Confluence Simulator</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/app">Live App</a>
+      <a href="/tools">Tools</a>
+      <a href="/pivot-calculator">Pivot Calculator</a>
+      <a href="/fibonacci-calculator">Fibonacci Calculator</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p>© 2026 Trading Bots Live · Educational use only · Not financial advice</p>
+  </footer>
+
+  <script>
+  (function () {
+    function num(id) { var v = parseFloat(document.getElementById(id).value); return Number.isFinite(v) ? v : NaN; }
+    function f(n) { return n.toLocaleString('en-US', { maximumFractionDigits: 3 }); }
+
+    var RETR = [0.236, 0.382, 0.5, 0.618, 0.786];
+    var EXT = [1.272, 1.618, 2.618];
+
+    document.getElementById('fb-calc').addEventListener('click', function () {
+      var high = num('fb-high'), low = num('fb-low');
+      var trend = document.getElementById('fb-trend').value;
+      var box = document.getElementById('fb-result');
+
+      if ([high, low].some(Number.isNaN) || high <= low) {
+        box.hidden = false;
+        document.getElementById('fb-retr').className = 'calc-levels calc-bad';
+        document.getElementById('fb-retr').innerHTML = 'Please enter a valid swing (High must be greater than Low).';
+        document.getElementById('fb-ext').innerHTML = '';
+        return;
+      }
+
+      var range = high - low;
+      box.hidden = false;
+
+      var retr = RETR.map(function (r) {
+        var price = trend === 'up' ? high - range * r : low + range * r;
+        return '<div class="calc-level calc-fib"><span>' + (r * 100).toFixed(1) + '%</span><strong>' + f(price) + '</strong></div>';
+      });
+      // add 0% and 100% anchors
+      retr.unshift('<div class="calc-level calc-pp"><span>0%</span><strong>' + f(trend === 'up' ? high : low) + '</strong></div>');
+      retr.push('<div class="calc-level calc-pp"><span>100%</span><strong>' + f(trend === 'up' ? low : high) + '</strong></div>');
+      document.getElementById('fb-retr').className = 'calc-levels';
+      document.getElementById('fb-retr').innerHTML = retr.join('');
+
+      var ext = EXT.map(function (e) {
+        var price = trend === 'up' ? low + range * e : high - range * e;
+        return '<div class="calc-level calc-res"><span>' + (e * 100).toFixed(1) + '%</span><strong>' + f(price) + '</strong></div>';
+      });
+      document.getElementById('fb-ext').className = 'calc-levels';
+      document.getElementById('fb-ext').innerHTML = ext.join('');
+    });
+
+    document.getElementById('fb-calc').click();
+  })();
+  </script>
+  <script src="/nav.js"></script>
+  <script src="/footer.js"></script>
+  <script src="/site-config.js"></script>
+  <script src="/monetize.js"></script>
+</body>
+</html>

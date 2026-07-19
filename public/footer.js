@@ -13,16 +13,17 @@
     {
       title: 'Tools', links: [
         { label: 'Trading Calculators', href: '/tools' },
+        { label: 'Pivot Point Calculator', href: '/pivot-calculator' },
+        { label: 'Fibonacci Calculator', href: '/fibonacci-calculator' },
         { label: 'Confluence Simulator', href: '/simulator' },
-        { label: 'Gold Glossary', href: '/glossary' },
       ]
     },
     {
       title: 'Learn', links: [
         { label: 'Gold Trading Strategy', href: '/gold-trading-strategy' },
+        { label: 'Forex Trading Guide', href: '/forex-trading' },
         { label: 'News & Guides', href: '/news' },
         { label: 'How It Works', href: '/how-it-works' },
-        { label: 'Risk Management', href: '/news/gold-risk-management-guide' },
       ]
     },
     {
