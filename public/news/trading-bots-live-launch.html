@@ -31,7 +31,11 @@
       <p class="article-meta">28 Feb 2026 · 3 min read</p>
     </header>
     <div class="prose">
-      <p>We're excited to launch <strong>trading-bots.live</strong> — a free web dashboard for XAUUSD gold signals on the M15 timeframe.</p>
+      <p>We're excited to officially launch <strong>trading-bots.live</strong> — a free, no-signup web dashboard for XAUUSD gold trading signals on the 15-minute timeframe. This post explains what the platform does, who it is for, the thinking behind building it, and where we plan to take it next. If you trade gold, or want to learn how, this is the tour.</p>
+
+      <h2>Why we built this</h2>
+      <p>The gold trading space is crowded with expensive Telegram groups, black-box "robots" sold for hundreds of dollars, and signal sellers who show only their winning trades. We wanted to build the opposite: a tool that is free to use, transparent about how it reaches its conclusions, and honest about the fact that trading is hard and risky. Every signal on the dashboard shows its probability and the technical factors behind it, so you can see the reasoning rather than just following an arrow on faith. Our goal is to help traders learn and practise before they ever risk real money.</p>
+
       <h2>What's included at launch</h2>
       <ul>
         <li><strong>Live dashboard</strong> at <a href="/app">/app</a> — BUY/SELL/HOLD with probability %</li>
@@ -41,11 +45,19 @@
         <li><strong>Paper trade tracking</strong> — stored in your browser</li>
         <li><strong>Backtest view</strong> — historical signal performance on past candles</li>
       </ul>
-      <h2>Cloud vs local</h2>
-      <p>The public site runs on Vercel with Yahoo Finance gold prices — no install required. Power users can run <code>START.bat</code> locally with optional MetaTrader 5 for broker-exact feeds.</p>
+      <h2>Who the platform is for</h2>
+      <p>Trading Bots Live is built for short-term gold traders who value a systematic, rule-based approach over gut feeling. Complete beginners can use it as a structured way to learn what a high-quality setup looks like, following signals on a demo account while they build experience. More experienced traders can use it as a second opinion — a way to confirm or challenge their own analysis with an objective, multi-factor score. Because it runs in the browser with no signup, there is no barrier to trying it.</p>
+
+      <h2>Cloud vs local: two ways to run it</h2>
+      <p>There are two ways to use the platform. The public website runs in the cloud and pulls live gold prices from Yahoo Finance (COMEX Gold, GC=F), so you can start immediately with nothing to install. For traders who want broker-exact XAUUSD prices that match their own account, the bot can also be run locally on Windows with MetaTrader 5 connected, giving a data feed identical to your broker's. Both modes use the same eight-factor scoring engine; the only difference is the price source and update speed.</p>
+
+      <h2>Our commitment to transparency</h2>
+      <p>We will never claim guaranteed profits, hide losing trades, or pressure you into depositing with a particular broker. Trading gold is genuinely risky, most retail traders lose money, and any tool — including ours — is an aid to decision-making, not a money-printing machine. We would rather keep your trust by being honest than win a quick subscription with hype. Everything on the site is provided for education and research.</p>
+
       <h2>What's next</h2>
-      <p>This news section will carry trading guides, market tips, and product updates. Follow along on <a href="/news">News</a> or bookmark the <a href="/app">live app</a>.</p>
-      <div class="article-disclaimer">Educational tool — not financial advice.</div>
+      <p>This news section will grow into a full library of trading guides, market tips, and product updates. We have already published in-depth articles on <a href="/news/best-times-trade-gold">the best times to trade gold</a>, <a href="/news/how-to-read-xauusd-signals">how to read XAUUSD signals</a>, and <a href="/news/gold-price-drivers-xauusd">what moves the gold price</a>, with more on the way every week. Follow along on the <a href="/news">News hub</a> or bookmark the <a href="/app">live dashboard</a> and make it part of your daily routine.</p>
+
+      <div class="article-disclaimer">Educational tool — not financial advice. Trading gold involves substantial risk of loss.</div>
     </div>
     <section class="cta-box">
       <h2>Try the bot now</h2>

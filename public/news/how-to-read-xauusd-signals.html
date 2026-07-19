@@ -31,23 +31,46 @@
       <p class="article-meta">8 Mar 2026 · 6 min read</p>
     </header>
     <div class="prose">
-      <p>Our <a href="/app">gold signal dashboard</a> shows more than a simple arrow. Understanding each field helps you filter noise and paper trade with discipline.</p>
+      <p>A trading signal is only useful if you understand what it is actually telling you. Too many beginners see a green "BUY" arrow, jump into a trade, and then panic when price moves against them — because they never learned to read the full picture behind the signal. Our <a href="/app">gold signal dashboard</a> deliberately shows more than a simple arrow. It gives you probability scores, risk levels, and a full breakdown of the technical factors driving the decision. This guide walks through every element on the screen so you can trade with understanding instead of blind faith.</p>
+
       <h2>Signal state: BUY, SELL, or HOLD</h2>
-      <p><strong>BUY</strong> and <strong>SELL</strong> appear when probability and confluence pass your threshold (default 75%). <strong>HOLD</strong> means conditions are mixed — the bot is protecting you from low-quality setups.</p>
-      <h2>Probability percentages</h2>
-      <p>You'll see separate BUY and SELL probability scores. Higher numbers mean more indicators align. Don't chase 51% — wait for strong alignment or use paper mode to learn typical ranges.</p>
-      <h2>Entry, stop loss, and take profit</h2>
-      <p>Active signals include three prices based on ATR (volatility):</p>
+      <p>At the top of the dashboard you will always see one of three states. <strong>BUY</strong> means the bot's analysis favours a long trade — it expects price to rise. <strong>SELL</strong> means it favours a short trade and expects price to fall. <strong>HOLD</strong> means conditions are mixed or weak, and the bot is deliberately staying out.</p>
+      <p>New traders often ignore HOLD or feel frustrated by it, but HOLD is one of the most valuable outputs the system produces. The market spends a large portion of its time in indecision, and forcing trades during those periods is how accounts get slowly drained. When the bot shows HOLD, it is protecting you from low-quality setups where the odds are roughly a coin flip. Respecting HOLD is a sign of a disciplined trader, not a missed opportunity.</p>
+
+      <h2>Understanding the probability percentages</h2>
+      <p>Beneath the signal state you will see separate BUY and SELL probability scores. These represent how strongly the current market data leans in each direction. A reading of 78% BUY versus 22% SELL indicates strong bullish alignment; a reading of 54% BUY versus 46% SELL indicates near-indecision — the kind of setup you should usually skip.</p>
+      <p>The single most common beginner mistake is chasing marginal probabilities. A 51% signal is barely better than random, yet the temptation to "get in early" is strong. Resist it. By default the bot only fires an actionable BUY or SELL when probability crosses roughly 75% with a meaningful edge over the opposite side. Spend your first week simply watching how these numbers move throughout a session — you will develop an intuition for what a genuinely strong reading looks like versus noise.</p>
+
+      <h2>Entry, stop loss, and take profit explained</h2>
+      <p>When an actionable signal fires, the dashboard displays three prices. Each is calculated from the Average True Range (ATR), a measure of how volatile gold currently is, so the levels adapt automatically to fast and slow markets.</p>
       <ul>
-        <li><strong>Entry</strong> — reference price when the signal fired</li>
-        <li><strong>Stop loss (SL)</strong> — invalidation level if the trade goes wrong</li>
-        <li><strong>Take profit (TP)</strong> — target based on risk-reward logic</li>
+        <li><strong>Entry</strong> — the reference price at the moment the signal fired. In live trading you may enter slightly above or below this depending on spread and speed.</li>
+        <li><strong>Stop loss (SL)</strong> — the price at which the trade idea is considered wrong. If price reaches your stop, the setup has failed and you exit to protect capital. The stop is placed roughly 1.5× ATR from entry.</li>
+        <li><strong>Take profit (TP)</strong> — the target where you lock in gains, placed roughly 2.0× ATR from entry.</li>
       </ul>
-      <h2>8-factor confluence panel</h2>
-      <p>Each factor (EMA trend, RSI, MACD, ADX, Bollinger Bands, candle flow, M5 confirmation, session liquidity) contributes to the score. Green = supportive, red = against the direction. See full breakdown on <a href="/how-it-works">How It Works</a>.</p>
-      <h2>Desktop alerts</h2>
-      <p>Click the bell on the dashboard to get notified when a new BUY or SELL fires — useful if you're not watching charts all day.</p>
-      <div class="article-disclaimer">Educational only — not financial advice. Always paper trade before using real money.</div>
+      <p>The relationship between these three numbers is what professionals call the <strong>risk-to-reward ratio</strong>. With a stop at 1.5× ATR and a target at 2.0× ATR, you are risking a smaller amount to potentially gain a larger one. This positive ratio means you do not need to win every trade to be profitable over time — a crucial concept most beginners overlook. Never move your stop loss further away to "give the trade room." That single habit destroys more accounts than any bad signal ever could.</p>
+
+      <h2>The 8-factor confluence panel</h2>
+      <p>The heart of the dashboard is the confluence panel, which shows how eight independent technical factors are voting. Each factor turns green when it supports the signal direction and red when it opposes it. The more factors that align, the higher the confidence:</p>
+      <ul>
+        <li><strong>EMA trend</strong> — are the 9, 21, and 50 moving averages stacked in a clear direction?</li>
+        <li><strong>RSI</strong> — is momentum overbought, oversold, or neutral?</li>
+        <li><strong>MACD</strong> — is momentum shifting toward the signal direction?</li>
+        <li><strong>ADX</strong> — is the trend strong enough to be worth trading?</li>
+        <li><strong>Bollinger Bands</strong> — is price breaking out of or reverting within its range?</li>
+        <li><strong>Candle flow</strong> — do recent candles show buying or selling pressure?</li>
+        <li><strong>M5 confirmation</strong> — does the faster 5-minute chart agree with the M15 signal?</li>
+        <li><strong>Session liquidity</strong> — is this a high-quality time of day to trade?</li>
+      </ul>
+      <p>Relying on a single indicator is dangerous because every indicator produces false signals on its own. RSI can scream "overbought" while a strong trend keeps climbing for hours. By requiring several factors to agree before firing, the bot filters out a large share of those traps. When you review a trade afterwards — win or lose — look at which factors were green and which were red. Over time this teaches you which combinations tend to work best in current market conditions. The full methodology is documented on our <a href="/how-it-works">How It Works</a> page.</p>
+
+      <h2>Desktop alerts so you never miss a setup</h2>
+      <p>You do not need to stare at the chart all day. Click the bell icon on the dashboard to enable browser notifications. When a new BUY or SELL fires, your device alerts you — ideal if you are working, studying, or simply prefer to check in only when a genuine opportunity appears. This pairs perfectly with trading a single defined <a href="/news/best-times-trade-gold">session window</a> rather than watching screens for hours.</p>
+
+      <h2>A simple routine for reading signals well</h2>
+      <p>Bringing it all together, here is a repeatable process. First, confirm the signal state is a clear BUY or SELL, not HOLD. Second, check the probability is strong (well above the halfway point) with a real gap over the opposite side. Third, glance at the confluence panel — you want a healthy majority of factors green, ideally including trend strength (ADX) and the M5 confirmation. Fourth, note the entry, stop, and target, and confirm the risk-to-reward makes sense for you. Fifth, verify no major news release is seconds away. Only when all five boxes are ticked should you consider acting. Practise this exact checklist during the <a href="/news/paper-trading-gold-7-day-guide">7-day paper trading challenge</a> until it becomes second nature.</p>
+
+      <div class="article-disclaimer">Educational only — not financial advice. Signals describe probabilities, not certainties. Always paper trade before using real money, and never risk more than you can afford to lose.</div>
     </div>
     <section class="article-related">
       <h2>Related articles</h2>

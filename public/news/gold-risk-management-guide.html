@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <title>Gold Risk Management: Position Size, Stop Loss &amp; R:R | Trading Bots Live</title>
+  <meta name="description" content="Complete gold risk management guide: how to size positions on XAUUSD, set stop losses, use risk-to-reward ratios, and protect your trading capital." />
+  <meta name="keywords" content="gold risk management, XAUUSD position size, stop loss gold, risk reward ratio, forex money management" />
+  <link rel="canonical" href="https://trading-bots.live/news/gold-risk-management-guide" />
+  <meta property="og:title" content="Gold Risk Management Guide (XAUUSD)" />
+  <meta property="og:url" content="https://trading-bots.live/news/gold-risk-management-guide" />
+  <meta property="og:image" content="https://trading-bots.live/logo.png" />
+  <link rel="stylesheet" href="/site.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9250909224692232" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Gold Risk Management: Position Size, Stop Loss & Risk-to-Reward","datePublished":"2026-07-18","dateModified":"2026-07-18","author":{"@type":"Organization","name":"Trading Bots Live"},"publisher":{"@type":"Organization","name":"Trading Bots Live","logo":{"@type":"ImageObject","url":"https://trading-bots.live/logo.png"}},"mainEntityOfPage":"https://trading-bots.live/news/gold-risk-management-guide"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trading-bots.live/"},{"@type":"ListItem","position":2,"name":"News","item":"https://trading-bots.live/news"},{"@type":"ListItem","position":3,"name":"Gold Risk Management Guide"}]}
+  </script>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="site-logo"><img src="/logo.png" alt="" class="site-logo-img" width="32" height="32" />Trading Bots <span class="live-dot">Live</span></a>
+    <div class="site-links">
+      <a href="/app">Live App</a>
+      <a href="/news" class="active">News</a>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/about">About</a>
+      <a href="/disclaimer">Disclaimer</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+  </nav>
+  <div class="ad-slot" data-zone="top" aria-label="Advertisement"></div>
+  <main class="site-wrap">
+    <p class="article-breadcrumb"><a href="/news">News</a> / Education</p>
+    <header class="article-header">
+      <span class="news-cat news-cat-education">Education</span>
+      <h1>Gold Risk Management: Position Size, Stop Loss &amp; Risk-to-Reward</h1>
+      <p class="article-meta">18 Jul 2026 · 8 min read</p>
+    </header>
+    <div class="prose">
+      <p>Ask any professional trader what separates them from the beginners who blow up their accounts, and almost none will mention a secret indicator or a magic signal. They will talk about <strong>risk management</strong>. It is the least glamorous part of trading and by far the most important. You can have a mediocre strategy and survive for years with excellent risk control; you can have a brilliant strategy and lose everything in a week without it. This guide covers the essentials of managing risk when trading gold (XAUUSD), in plain language, with practical numbers.</p>
+
+      <h2>The one rule that matters most: risk a small, fixed percentage</h2>
+      <p>The foundation of all risk management is simple: never risk more than a small, fixed percentage of your account on any single trade. For most traders, that number is <strong>1%</strong>, and beginners may want to use even less. On a $1,000 account, 1% risk means you are willing to lose at most $10 if the trade hits its stop loss. On a $5,000 account, it is $50.</p>
+      <p>Why does this matter so much? Because it makes losing streaks survivable. Even a strong strategy will occasionally produce five, six, or seven losers in a row — that is just statistics. If you risk 1% per trade, seven straight losses cost you about 7% of your account, which is entirely recoverable. If you risk 20% per trade, three losses in a row wipe out more than half your account, and the psychological damage is often worse than the financial. Small, consistent risk is what keeps you in the game long enough for your edge to play out.</p>
+
+      <h2>How to calculate position size</h2>
+      <p>Position size is the bridge between "I want to risk $10" and "how many lots do I actually buy." The calculation has three inputs: your account risk in currency, the distance from your entry to your stop loss, and the value per point of movement for your position. In simple terms:</p>
+      <p><strong>Position size = (Account × Risk %) ÷ (Stop distance × Value per point)</strong></p>
+      <p>For example, if you are risking $10 and your stop loss is placed such that a loss would be $10 at 0.01 lots given the stop distance, then you trade 0.01 lots. The exact numbers depend on your broker's contract size for gold and your stop distance, so most traders use a free position-size calculator. The key takeaway is that your position size should be <em>derived from</em> your stop loss and risk limit — not chosen first and then justified afterwards. This is the reverse of how most beginners do it, and it is why they end up over-leveraged.</p>
+
+      <h2>Setting a stop loss that makes sense</h2>
+      <p>A stop loss is the price at which you admit the trade idea was wrong and exit to protect your capital. It should be placed at a level that, if reached, genuinely invalidates your reason for the trade — not at an arbitrary round number, and definitely not "wherever I can afford." Common approaches include placing the stop beyond a recent swing high or low, or using a volatility measure like the Average True Range (ATR).</p>
+      <p>Our <a href="/app">signal dashboard</a> uses ATR-based stops automatically, placing the stop at roughly 1.5× the current ATR from entry. This is a robust approach because it adapts to conditions: during calm markets the stop sits closer, and during volatile news periods it widens so a normal price swing does not stop you out prematurely. Whatever method you use, the golden rule is absolute: <strong>never move your stop loss further away once you are in a trade.</strong> Widening a stop to avoid taking a loss is one of the fastest ways to turn a small, planned loss into an account-threatening disaster.</p>
+
+      <h2>Understanding risk-to-reward ratio</h2>
+      <p>Risk-to-reward (often written R:R) compares how much you are risking to how much you stand to gain. If you risk $10 to potentially make $20, your risk-to-reward is 1:2. This single number has a profound effect on your profitability because it changes how often you need to be right.</p>
+      <p>Consider a trader using a 1:2 risk-to-reward. They only need to win about 34% of their trades just to break even, and anything above that is profit. A trader using 1:1 needs to win more than half their trades to profit. This is why professionals obsess over finding good risk-to-reward setups — it takes the pressure off being right all the time. Our dashboard targets take profit at roughly 2.0× ATR against a 1.5× ATR stop, giving a favourable ratio on every signal. Learn to read these levels in our <a href="/news/how-to-read-xauusd-signals">signal-reading guide</a>.</p>
+
+      <h2>The daily loss limit</h2>
+      <p>Even with perfect per-trade risk, a bad day can spiral if you let it. The antidote is a <strong>daily loss limit</strong>: a rule that says once you have lost a set amount — for example, two or three trades' worth of risk, or 2–3% of your account — you stop trading for the day. This protects you from "revenge trading," the destructive urge to win back losses immediately, which almost always leads to bigger losses. Close the platform, step away, and return tomorrow with a clear head. The market will still be there.</p>
+
+      <h2>Leverage: the double-edged sword</h2>
+      <p>Brokers offer high leverage on gold, sometimes 100:1 or more. Leverage lets you control a large position with a small deposit, which amplifies both gains and losses. Beginners frequently treat high leverage as an invitation to trade large — and it destroys them. Leverage itself is not the enemy; using it to exceed your risk limit is. If you follow the position-sizing rules above, your effective risk stays controlled regardless of the leverage on offer. Treat leverage as a tool that <em>allows</em> flexibility, not one that <em>requires</em> large bets.</p>
+
+      <h2>Putting it all together</h2>
+      <p>Sound risk management is a system, and every piece reinforces the others. Decide your fixed risk percentage before you trade. Let your stop loss and risk limit determine your position size. Only take trades with a favourable risk-to-reward. Set a daily loss limit and honour it without exception. Keep leverage in check. None of this is complicated, but all of it requires discipline — and discipline, not prediction, is what keeps traders alive. Practise these rules with zero pressure in our <a href="/news/paper-trading-gold-7-day-guide">7-day paper trading challenge</a> before you ever risk real money.</p>
+
+      <div class="article-disclaimer">Educational content only — not financial advice. Trading gold carries a substantial risk of loss. Position-size examples are illustrative; always verify contract sizes and calculations with your own broker.</div>
+    </div>
+    <section class="article-related">
+      <h2>Related articles</h2>
+      <ul>
+        <li><a href="/news/gold-trading-for-beginners">Gold Trading for Beginners</a></li>
+        <li><a href="/news/how-to-read-xauusd-signals">How to Read XAUUSD Signals</a></li>
+        <li><a href="/news/paper-trading-gold-7-day-guide">7-Day Paper Trading Challenge</a></li>
+      </ul>
+    </section>
+    <section class="cta-box">
+      <h2>Practise risk management free</h2>
+      <a href="/app" class="btn-primary">Open Gold Signal Bot</a>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a><a href="/app">Live App</a><a href="/news">News</a>
+      <a href="/how-it-works">How It Works</a><a href="/about">About</a>
+      <a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a>
+    </nav>
+    <p>© 2026 Trading Bots Live · Not financial advice</p>
+  </footer>
+  <script src="/site-config.js"></script>
+  <script src="/monetize.js"></script>
+</body>
+</html>

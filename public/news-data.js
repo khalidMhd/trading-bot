@@ -1,6 +1,24 @@
 /** Article registry — add new posts here and create matching HTML in /news/ */
 window.NEWS_ARTICLES = [
   {
+    slug: 'gold-risk-management-guide',
+    title: 'Gold Risk Management: Position Size, Stop Loss & Risk-to-Reward',
+    excerpt: 'The skill that keeps traders alive. Position sizing, stop losses, risk-to-reward, daily loss limits, and leverage — explained with numbers.',
+    category: 'education',
+    categoryLabel: 'Education',
+    date: '2026-07-18',
+    readMin: 8,
+  },
+  {
+    slug: 'gold-trading-indicators-explained',
+    title: 'Gold Trading Indicators Explained: EMA, RSI, MACD, ADX',
+    excerpt: 'Plain-English guide to the key XAUUSD indicators and why combining them (confluence) beats relying on any single one.',
+    category: 'strategy',
+    categoryLabel: 'Strategy',
+    date: '2026-07-17',
+    readMin: 9,
+  },
+  {
     slug: 'gold-price-drivers-xauusd',
     title: 'What Moves Gold Price? 7 XAUUSD Drivers Every Trader Should Know',
     excerpt: 'USD, real yields, Fed policy, inflation, geopolitics, and risk sentiment — how each factor pushes XAUUSD up or down.',

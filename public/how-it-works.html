@@ -12,6 +12,10 @@
   <meta property="og:description" content="Multi-indicator probability scoring for XAUUSD short-term gold trades." />
   <meta property="og:url" content="https://trading-bots.live/how-it-works" />
   <link rel="stylesheet" href="/site.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9250909224692232" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the gold signal bot really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The live dashboard is completely free to use and requires no signup or payment. The signals themselves are always free."}},{"@type":"Question","name":"Do I need to install anything?","acceptedAnswer":{"@type":"Answer","text":"No. The cloud dashboard runs in your web browser using live gold prices. Advanced users can optionally run it locally with MetaTrader 5 for broker-exact prices."}},{"@type":"Question","name":"Will the bot place trades for me?","acceptedAnswer":{"@type":"Answer","text":"No. Trading Bots Live is an analysis and education tool. It shows signals, probabilities, and risk levels, but you decide whether and how to act."}},{"@type":"Question","name":"Can I make guaranteed profits?","acceptedAnswer":{"@type":"Answer","text":"No. Trading gold carries real risk and most retail traders lose money. No tool can guarantee profits. Always paper trade first."}}]}
+  </script>
 </head>
 <body>
   <nav class="site-nav">
@@ -41,6 +45,14 @@
         It outputs BUY or SELL only when probability, confluence, trend strength (ADX), and directional edge all meet strict thresholds.
         Typical hold time is <strong>15–30 minutes</strong>.
       </p>
+      <p>
+        The core idea is simple but powerful: instead of relying on any single indicator — each of which produces false
+        signals on its own — the system combines eight independent measures into one probability score. A trade is only
+        suggested when a clear majority of these measures agree, momentum has a genuine edge, and the market is trending
+        strongly enough to be worth the risk. The result is fewer signals than a typical indicator-based system, but
+        signals of noticeably higher quality. This is a deliberate design choice built around the principle of
+        <strong>quality over quantity</strong>.
+      </p>
 
       <h2>Signal requirements (balanced mode)</h2>
       <ul>
@@ -67,6 +79,23 @@
         When a signal fires, SL and TP are set automatically using <strong>ATR (14)</strong>:
         stop loss at 1.5× ATR and take profit at 2.0× ATR from entry. This adapts to current gold volatility.
       </p>
+      <p>
+        Using ATR — the Average True Range — means the risk levels breathe with the market. When gold is calm and ranges
+        are tight, stops and targets are placed closer to entry. When volatility spikes around news events, they widen
+        automatically so a normal wiggle does not stop you out prematurely. The 1.5× stop and 2.0× target also create a
+        positive risk-to-reward ratio, meaning you do not need to win the majority of your trades to come out ahead over
+        a large sample. Learn how to interpret these levels in our guide to
+        <a href="/news/how-to-read-xauusd-signals">reading XAUUSD signals</a>.
+      </p>
+
+      <h2>Why probability, not prediction</h2>
+      <p>
+        No system can predict the future, and we do not pretend to. What the bot does is estimate the <em>probability</em>
+        that a move continues in a given direction based on current conditions. A 78% BUY reading does not mean price will
+        definitely rise — it means the weight of evidence favours the upside. Over many trades, consistently acting on
+        higher-probability setups with sound risk management is what produces an edge. This is the same statistical
+        thinking used by professional desks, translated into a simple visual dashboard.
+      </p>
 
       <h2>Getting started</h2>
       <div class="steps">
@@ -92,6 +121,13 @@
           </div>
         </div>
       </div>
+      <h2>Frequently asked questions</h2>
+      <p><strong>Is the gold signal bot really free?</strong><br />Yes. The live dashboard is completely free to use and requires no signup or payment. We may show ads or partner offers on some pages, but the signals themselves are free.</p>
+      <p><strong>Do I need to install anything?</strong><br />No. The cloud dashboard runs entirely in your web browser using live gold prices from Yahoo Finance. Advanced users can optionally run it locally with MetaTrader 5 for broker-exact prices, but this is not required.</p>
+      <p><strong>Will the bot place trades for me?</strong><br />No. Trading Bots Live is an analysis and education tool. It shows signals, probabilities, and risk levels, but you decide whether and how to act. We never execute trades on your behalf.</p>
+      <p><strong>What timeframe and market does it cover?</strong><br />It focuses on gold (XAUUSD) on the 15-minute (M15) chart, aimed at short-term trades lasting roughly 15–30 minutes.</p>
+      <p><strong>Can I make guaranteed profits?</strong><br />No. Trading gold carries real risk and most retail traders lose money. The bot improves your decision-making by filtering for higher-probability setups, but no tool can guarantee profits. Always paper trade first.</p>
+      <p><strong>How many signals will I get per day?</strong><br />It varies with market conditions. Because the system prioritises quality, quiet or choppy days may produce very few signals, while trending, high-liquidity sessions produce more.</p>
     </div>
 
     <div class="affiliate-slot" aria-label="Partner offer"></div>
