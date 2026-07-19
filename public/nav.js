@@ -12,6 +12,7 @@
     {
       type: 'group', label: 'Tools', items: [
         { label: 'Trading Calculators', href: '/tools' },
+        { label: 'Confluence Simulator', href: '/simulator' },
       ]
     },
     {

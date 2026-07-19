@@ -12,6 +12,7 @@
     {
       title: 'Tools', links: [
         { label: 'Trading Calculators', href: '/tools' },
+        { label: 'Confluence Simulator', href: '/simulator' },
         { label: 'Gold Glossary', href: '/glossary' },
       ]
     },

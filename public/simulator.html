@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Gold Confluence Simulator — See How XAUUSD Signals Are Scored | Trading Bots Live</title>
+  <meta name="description" content="Interactive gold confluence simulator. Tweak EMA, RSI, MACD, ADX and more to see how an 8-factor XAUUSD signal is scored into BUY, SELL or HOLD with an estimated win rate." />
+  <meta name="keywords" content="confluence simulator, gold trading confluence, XAUUSD signal calculator, how trading signals work, indicator confluence, trend confirmation tool, gold signal score" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://trading-bots.live/simulator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gold Confluence Simulator (Interactive)" />
+  <meta property="og:description" content="Tweak the indicators and watch the XAUUSD signal change in real time. Learn how multi-factor confluence scoring works." />
+  <meta property="og:url" content="https://trading-bots.live/simulator" />
+  <meta property="og:image" content="https://trading-bots.live/logo.png" />
+  <link rel="stylesheet" href="/site.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9250909224692232" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Gold Confluence Simulator","url":"https://trading-bots.live/simulator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Interactive tool that shows how an 8-factor confluence score turns indicators into a gold BUY/SELL/HOLD signal."}
+  </script>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="site-logo"><img src="/logo.png" alt="" class="site-logo-img" width="32" height="32" />Trading Bots <span class="live-dot">Live</span></a>
+    <div class="site-links">
+      <a href="/app">Live App</a>
+      <a href="/simulator" class="active">Simulator</a>
+      <a href="/tools">Tools</a>
+      <a href="/news">News</a>
+      <a href="/how-it-works">How It Works</a>
+    </div>
+  </nav>
+
+  <div class="ad-slot" data-zone="top" aria-label="Advertisement"></div>
+
+  <main class="site-wrap">
+    <header class="page-header">
+      <h1>Gold Confluence Simulator</h1>
+      <p>Tweak the indicators below and watch the XAUUSD signal update instantly. See exactly how an 8-factor confluence score becomes a BUY, SELL, or HOLD.</p>
+    </header>
+
+    <section class="sim" aria-label="Confluence simulator">
+      <div class="sim-gauge-wrap">
+        <svg viewBox="0 0 300 176" class="sim-gauge" aria-hidden="true">
+          <path class="sim-gauge-bg" d="M22 162 A128 128 0 0 1 278 162" fill="none" stroke-width="22" pathLength="100" stroke-linecap="round" />
+          <path id="sim-arc" class="sim-gauge-fg buy" d="M22 162 A128 128 0 0 1 278 162" fill="none" stroke-width="22" pathLength="100" stroke-linecap="round" stroke-dasharray="0 100" />
+        </svg>
+        <div class="sim-gauge-center">
+          <div class="sim-score" id="sim-score">0/8</div>
+          <div class="sim-signal sim-hold" id="sim-signal">HOLD</div>
+          <div class="sim-prob" id="sim-prob">Adjust the factors below</div>
+        </div>
+      </div>
+
+      <div class="sim-summary">
+        <div><span>Confluence Score</span><strong id="sum-score">0/8</strong></div>
+        <div><span>Signal</span><strong id="sum-signal">HOLD</strong></div>
+        <div><span>Est. Win Rate</span><strong id="sum-win">—</strong></div>
+      </div>
+
+      <div class="sim-factors" id="sim-factors">
+        <!-- RSI slider -->
+        <div class="sim-factor">
+          <div class="sim-factor-head">
+            <span class="sim-factor-name">RSI (momentum)</span>
+            <span class="sim-rsi-tag" id="rsi-tag">Neutral</span>
+          </div>
+          <input type="range" id="rsi-slider" min="0" max="100" value="62" class="sim-slider" />
+          <div class="sim-rsi-scale"><span>0 oversold</span><span id="rsi-val">62</span><span>overbought 100</span></div>
+        </div>
+      </div>
+
+      <div class="sim-actions">
+        <button type="button" class="btn-secondary" id="sim-random">🎲 Randomize</button>
+        <button type="button" class="btn-secondary" id="sim-reset">↺ Reset</button>
+      </div>
+      <p class="gp-note" style="text-align:center">Simplified educational model. The live dashboard uses the same idea with real market data.</p>
+    </section>
+
+    <div class="ad-slot" data-zone="mid" aria-label="Advertisement"></div>
+
+    <div class="prose">
+      <h2>What is confluence in trading?</h2>
+      <p><strong>Confluence</strong> is the simple but powerful idea that a trade setup is stronger when several independent signals agree. One indicator can be wrong easily; when six or seven point the same way at once, the odds improve. Instead of staring at a single line and guessing, confluence trading asks a clear question: <em>how many of my rules currently agree, and in which direction?</em></p>
+      <p>The simulator above turns that question into a live score. Each of the eight factors can lean bullish, bearish, or neutral. The tool counts the votes, takes the stronger side, and expresses it as a score out of eight — the higher the score, the stronger the agreement, and the more decisive the resulting signal.</p>
+
+      <h2>The eight factors, explained</h2>
+      <ul>
+        <li><strong>EMA Trend</strong> — the direction of the moving averages. The backbone of the bias.</li>
+        <li><strong>RSI</strong> — momentum. Above the midline leans bullish; below leans bearish.</li>
+        <li><strong>MACD</strong> — confirms whether momentum agrees with the trend.</li>
+        <li><strong>ADX / Trend Strength</strong> — is the trend strong enough to trade, or just chop?</li>
+        <li><strong>Bollinger Bands</strong> — volatility and where price sits within its range.</li>
+        <li><strong>Candle Flow</strong> — the recent price-action structure (higher highs vs lower lows).</li>
+        <li><strong>M5 Confirmation</strong> — does the lower timeframe agree with the M15 setup?</li>
+        <li><strong>Session Liquidity</strong> — is this an active, tradable session or a quiet one?</li>
+      </ul>
+      <p>Want the full detail on how each is weighted? Read our <a href="/how-it-works">How It Works</a> page and the <a href="/news/gold-trading-indicators-explained">indicators explained</a> guide.</p>
+
+      <h2>Why a score beats a single indicator</h2>
+      <p>Every indicator has a blind spot. Moving averages whipsaw in ranges; RSI gives false reversals in strong trends; breakouts fail without volume. The magic of confluence is that these weaknesses rarely overlap — when one tool is being fooled, another usually catches it. By requiring a <em>majority</em> to agree before acting, you filter out a large share of the low-quality setups that trap beginners. That is exactly why our <a href="/app">Gold Signal Bot</a> only fires a BUY or SELL when enough factors align, and shows HOLD the rest of the time.</p>
+
+      <h2>How the estimated win rate works</h2>
+      <p>The "estimated win rate" in the simulator is an illustrative figure that rises with the confluence score, to demonstrate a real principle: higher-agreement setups have historically tended to perform better than coin-flip entries. It is <strong>not a prediction or a guarantee</strong> — no tool can promise results, and even a strong setup can lose. Real edge comes from combining good setups with strict <a href="/news/gold-risk-management-guide">risk management</a> and practising first with our <a href="/news/paper-trading-gold-7-day-guide">paper trading challenge</a>.</p>
+
+      <div class="article-disclaimer">This simulator is an educational model, not a live trading signal or financial advice. The estimated win rate is illustrative only. Trading gold carries a substantial risk of loss.</div>
+    </div>
+
+    <div class="affiliate-slot" aria-label="Partner offer"></div>
+
+    <section class="cta-box">
+      <h2>See real confluence on live gold</h2>
+      <p>The live dashboard scores these factors on real XAUUSD data every minute — free.</p>
+      <a href="/app" class="btn-primary">Open Gold Signal Bot</a>
+    </section>
+
+    <section class="article-related">
+      <h2>Related</h2>
+      <ul>
+        <li><a href="/how-it-works">How the Signal Bot Works</a></li>
+        <li><a href="/news/gold-trading-indicators-explained">Gold Indicators Explained</a></li>
+        <li><a href="/news/how-to-read-xauusd-signals">How to Read XAUUSD Signals</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/app">Live App</a>
+      <a href="/simulator">Simulator</a>
+      <a href="/tools">Tools</a>
+      <a href="/news">News</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p>© 2026 Trading Bots Live · Educational use only · Not financial advice</p>
+  </footer>
+
+  <script>
+  (function () {
+    // Factor definitions (7 toggles + RSI handled separately) = 8 total
+    var TOGGLE_FACTORS = [
+      { key: 'ema', name: 'EMA Trend', hint: 'Moving-average direction' },
+      { key: 'macd', name: 'MACD', hint: 'Momentum confirmation' },
+      { key: 'adx', name: 'ADX / Trend Strength', hint: 'Strong trend vs chop' },
+      { key: 'boll', name: 'Bollinger Bands', hint: 'Volatility & position' },
+      { key: 'candle', name: 'Candle Flow', hint: 'Price-action structure' },
+      { key: 'm5', name: 'M5 Confirmation', hint: 'Lower timeframe agrees' },
+      { key: 'session', name: 'Session Liquidity', hint: 'Active trading window' },
+    ];
+    var DEFAULTS = { ema: 'buy', macd: 'buy', adx: 'buy', boll: 'buy', candle: 'buy', m5: '0', session: 'buy', rsi: 62 };
+    var state = {};
+
+    var container = document.getElementById('sim-factors');
+
+    TOGGLE_FACTORS.forEach(function (f) {
+      var wrap = document.createElement('div');
+      wrap.className = 'sim-factor';
+      wrap.innerHTML =
+        '<div class="sim-factor-head"><span class="sim-factor-name">' + f.name + '</span>' +
+        '<span class="sim-factor-hint">' + f.hint + '</span></div>' +
+        '<div class="sim-seg" data-factor="' + f.key + '">' +
+          '<button type="button" data-v="buy">Bullish</button>' +
+          '<button type="button" data-v="0">Neutral</button>' +
+          '<button type="button" data-v="sell">Bearish</button>' +
+        '</div>';
+      container.appendChild(wrap);
+    });
+
+    var segButtons = container.querySelectorAll('.sim-seg button');
+    segButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var seg = btn.parentElement;
+        var key = seg.getAttribute('data-factor');
+        seg.querySelectorAll('button').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        state[key] = btn.getAttribute('data-v');
+        compute();
+      });
+    });
+
+    var rsiSlider = document.getElementById('rsi-slider');
+    rsiSlider.addEventListener('input', function () {
+      state.rsi = parseInt(rsiSlider.value, 10);
+      compute();
+    });
+
+    function rsiVote(v) { return v >= 55 ? 'buy' : (v <= 45 ? 'sell' : '0'); }
+
+    function applyState() {
+      container.querySelectorAll('.sim-seg').forEach(function (seg) {
+        var key = seg.getAttribute('data-factor');
+        seg.querySelectorAll('button').forEach(function (b) {
+          b.classList.toggle('active', b.getAttribute('data-v') === state[key]);
+        });
+      });
+      rsiSlider.value = state.rsi;
+    }
+
+    function compute() {
+      var buy = 0, sell = 0;
+      TOGGLE_FACTORS.forEach(function (f) {
+        if (state[f.key] === 'buy') buy++;
+        else if (state[f.key] === 'sell') sell++;
+      });
+      var rv = rsiVote(state.rsi);
+      if (rv === 'buy') buy++; else if (rv === 'sell') sell++;
+
+      // RSI tag
+      var tag = document.getElementById('rsi-tag');
+      document.getElementById('rsi-val').textContent = state.rsi;
+      tag.textContent = rv === 'buy' ? 'Bullish' : (rv === 'sell' ? 'Bearish' : 'Neutral');
+      tag.className = 'sim-rsi-tag ' + (rv === 'buy' ? 'tag-buy' : (rv === 'sell' ? 'tag-sell' : 'tag-hold'));
+
+      var score = Math.max(buy, sell);
+      var dir = buy > sell ? 'buy' : (sell > buy ? 'sell' : 'hold');
+
+      var signal, cls, win;
+      if (dir === 'hold' || score < 5) {
+        signal = 'HOLD'; cls = 'sim-hold'; win = null;
+      } else {
+        var word = dir === 'buy' ? 'BUY' : 'SELL';
+        signal = (score >= 7 ? 'STRONG ' : '') + word;
+        cls = dir === 'buy' ? 'sim-buy' : 'sim-sell';
+        win = Math.max(50, Math.min(92, Math.round(45 + score * 5.5)));
+      }
+
+      document.getElementById('sim-score').textContent = score + '/8';
+      var sigEl = document.getElementById('sim-signal');
+      sigEl.textContent = signal;
+      sigEl.className = 'sim-signal ' + cls;
+      document.getElementById('sim-prob').textContent = win ? ('Estimated win probability: ' + win + '%') : 'Not enough agreement to trade';
+
+      document.getElementById('sum-score').textContent = score + '/8';
+      document.getElementById('sum-signal').textContent = signal;
+      document.getElementById('sum-win').textContent = win ? (win + '%') : '—';
+
+      var arc = document.getElementById('sim-arc');
+      arc.setAttribute('stroke-dasharray', (score / 8 * 100).toFixed(1) + ' 100');
+      arc.setAttribute('class', 'sim-gauge-fg ' + dir);
+    }
+
+    document.getElementById('sim-reset').addEventListener('click', function () {
+      state = Object.assign({}, DEFAULTS);
+      applyState();
+      compute();
+    });
+
+    document.getElementById('sim-random').addEventListener('click', function () {
+      var opts = ['buy', '0', 'sell'];
+      TOGGLE_FACTORS.forEach(function (f) { state[f.key] = opts[Math.floor(Math.random() * 3)]; });
+      state.rsi = Math.floor(Math.random() * 101);
+      applyState();
+      compute();
+    });
+
+    // init
+    state = Object.assign({}, DEFAULTS);
+    applyState();
+    compute();
+  })();
+  </script>
+  <script src="/nav.js"></script>
+  <script src="/footer.js"></script>
+  <script src="/site-config.js"></script>
+  <script src="/monetize.js"></script>
+</body>
+</html>
