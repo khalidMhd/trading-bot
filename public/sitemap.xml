@@ -2,101 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://trading-bots.live/</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/app</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://trading-bots.live/gold-price</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://trading-bots.live/news</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/tools</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://trading-bots.live/glossary</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
     <loc>https://trading-bots.live/calendar</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://trading-bots.live/glossary</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://trading-bots.live/news/gold-risk-management-guide</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/news/gold-trading-indicators-explained</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/news/gold-price-drivers-xauusd</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/news/paper-trading-gold-7-day-guide</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/news/free-vs-paid-gold-signals</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/news/best-times-trade-gold</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/news/how-to-read-xauusd-signals</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/news/xauusd-m15-strategy-guide</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/news/gold-trading-for-beginners</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/news/trading-bots-live-launch</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/how-it-works</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/about</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/disclaimer</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://trading-bots.live/privacy</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

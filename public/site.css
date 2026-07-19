@@ -971,6 +971,97 @@ a:hover { text-decoration: underline; }
 .cal-high { background: #f8514922; color: #f87171; }
 .cal-med { background: #d9a62622; color: #e0b24a; }
 
+/* ——— Gold price live page ——— */
+.gp-hero {
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  background: radial-gradient(120% 100% at 50% 0%, #d9a62615, transparent 70%);
+  border-radius: 16px;
+  margin-bottom: 1.25rem;
+}
+
+.gp-label {
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.gp-price {
+  font-size: clamp(2.75rem, 9vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.gp-change {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  color: var(--muted);
+}
+
+.gp-up { color: var(--buy); }
+.gp-down { color: var(--sell); }
+
+.gp-updated {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.gp-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.gp-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  text-align: center;
+}
+
+.gp-stat-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.gp-stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.gp-stat-signal { border-color: var(--gold); }
+
+.gp-sig-buy { color: var(--buy); }
+.gp-sig-sell { color: var(--sell); }
+.gp-sig-hold { color: var(--muted); }
+
+.gp-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.gp-note {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 @media (max-width: 640px) {
   .cal-head { display: none; }
   .cal-row {

@@ -23,6 +23,7 @@ const pageRoutes = {
   '/tools': 'tools.html',
   '/glossary': 'glossary.html',
   '/calendar': 'calendar.html',
+  '/gold-price': 'gold-price.html',
   '/about': 'about.html',
   '/how-it-works': 'how-it-works.html',
   '/disclaimer': 'disclaimer.html',
