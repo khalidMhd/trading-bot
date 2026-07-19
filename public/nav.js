@@ -5,6 +5,7 @@
     {
       type: 'group', label: 'Markets', items: [
         { label: 'Gold Price Today', href: '/gold-price' },
+        { label: 'Gold Rate (Tola/Gram)', href: '/gold-rate' },
         { label: 'Economic Calendar', href: '/calendar' },
       ]
     },

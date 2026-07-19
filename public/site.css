@@ -215,6 +215,68 @@ a:hover { text-decoration: underline; }
 }
 
 .site-footer a { color: var(--muted); }
+.site-footer a:hover { color: var(--text); }
+
+/* ——— Shared multi-column footer ——— */
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(4, 1fr);
+  gap: 2rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.footer-brand .site-logo { margin-bottom: 0.75rem; }
+
+.footer-brand p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  color: var(--text);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+  text-align: center;
+}
+
+.footer-bottom p { margin: 0 0 0.4rem; }
+
+.footer-risk {
+  font-size: 0.75rem;
+  color: var(--muted);
+  max-width: 640px;
+  margin: 0 auto !important;
+  opacity: 0.8;
+}
+
+@media (max-width: 780px) {
+  .footer-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 460px) {
+  .footer-cols { grid-template-columns: 1fr; }
+}
 
 /* ——— Hero ——— */
 .hero {
@@ -1081,6 +1143,12 @@ a:hover { text-decoration: underline; }
 
 .cal-high { background: #f8514922; color: #f87171; }
 .cal-med { background: #d9a62622; color: #e0b24a; }
+
+#rate-table .cal-row { grid-template-columns: 1.1fr 1fr 1.2fr 1fr; }
+#rate-table .cal-row:not(.cal-head) span:not(:first-child) { color: var(--gold); font-weight: 600; }
+@media (max-width: 640px) {
+  #rate-table .cal-row { grid-template-columns: 1fr; }
+}
 
 /* ——— Gold price live page ——— */
 .gp-hero {

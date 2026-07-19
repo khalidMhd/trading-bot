@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Gold Rate Today — Price Per Tola, Per Gram &amp; 10g (22K/24K) | Trading Bots Live</title>
+  <meta name="description" content="Live gold rate today per tola, per gram, and per 10 grams in your currency (PKR, INR, USD, AED, SAR and more). See 24K and 22K gold prices updated from the live XAUUSD market." />
+  <meta name="keywords" content="gold rate today, gold price per tola, gold price per gram, 1 gram gold price, 22k gold rate, 24k gold rate, gold price per 10 grams, gold rate in pkr, gold rate in inr, today gold rate" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://trading-bots.live/gold-rate" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gold Rate Today — Per Tola, Per Gram (22K/24K)" />
+  <meta property="og:description" content="Live gold rate per tola, gram and 10g in your local currency. 24K and 22K, updated from the live market." />
+  <meta property="og:url" content="https://trading-bots.live/gold-rate" />
+  <meta property="og:image" content="https://trading-bots.live/logo.png" />
+  <link rel="stylesheet" href="/site.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9250909224692232" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the gold rate today per tola?","acceptedAnswer":{"@type":"Answer","text":"The live gold rate per tola is shown in the converter on this page. One tola equals 11.6638 grams, so the per-tola rate is the live per-gram gold price multiplied by 11.6638, in your chosen currency and karat (24K or 22K)."}},{"@type":"Question","name":"What is the difference between 24K and 22K gold?","acceptedAnswer":{"@type":"Answer","text":"24K gold is 99.9% pure, while 22K gold is about 91.7% pure (the rest is alloy metals for durability). Because 22K contains less pure gold, its rate per gram or tola is lower than 24K. Jewellery is often 22K or 21K, while bars and coins are usually 24K."}},{"@type":"Question","name":"How is the gold rate calculated per gram?","acceptedAnswer":{"@type":"Answer","text":"The international gold price is quoted per troy ounce (31.1035 grams) in US dollars. To get the price per gram, divide the ounce price by 31.1035, multiply by your currency's exchange rate, and multiply by the purity factor (1.0 for 24K, 0.9167 for 22K)."}}]}
+  </script>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="site-logo"><img src="/logo.png" alt="" class="site-logo-img" width="32" height="32" />Trading Bots <span class="live-dot">Live</span></a>
+    <div class="site-links">
+      <a href="/app">Live App</a>
+      <a href="/gold-price">Gold Price</a>
+      <a href="/gold-rate" class="active">Gold Rate</a>
+      <a href="/tools">Tools</a>
+      <a href="/news">News</a>
+    </div>
+  </nav>
+
+  <div class="ad-slot" data-zone="top" aria-label="Advertisement"></div>
+
+  <main class="site-wrap">
+    <header class="page-header">
+      <h1>Gold Rate Today — Per Tola, Gram &amp; 10 Grams</h1>
+      <p>Live gold rate in your currency and karat, calculated from the international XAUUSD market price in real time.</p>
+    </header>
+
+    <section class="gp-hero" aria-label="Live gold price">
+      <p class="gp-label">● LIVE · International Gold Price (XAUUSD)</p>
+      <div class="gp-price" id="gp-price">—</div>
+      <div class="gp-change" id="gp-change">Loading live price…</div>
+      <p class="gp-updated" id="gp-updated"></p>
+    </section>
+
+    <section class="tool-card" aria-label="Gold rate converter">
+      <h2>🧮 Gold Rate Calculator</h2>
+      <p class="tool-sub">Choose your currency and karat to see today's gold rate per gram, tola and 10 grams.</p>
+      <div class="tool-grid">
+        <label>Currency
+          <select id="cv-currency">
+            <option value="USD|1">USD — US Dollar</option>
+            <option value="PKR|278">PKR — Pakistani Rupee</option>
+            <option value="INR|83">INR — Indian Rupee</option>
+            <option value="AED|3.67">AED — UAE Dirham</option>
+            <option value="SAR|3.75">SAR — Saudi Riyal</option>
+            <option value="GBP|0.79">GBP — British Pound</option>
+            <option value="EUR|0.92">EUR — Euro</option>
+          </select>
+        </label>
+        <label>Exchange rate (per 1 USD)
+          <input type="number" id="cv-rate" value="1" min="0" step="any" />
+        </label>
+      </div>
+      <p class="gp-note" style="margin-bottom:1rem">Preset rates are approximate — enter your exact local rate for precise figures.</p>
+
+      <div class="cal-table" id="rate-table">
+        <div class="cal-row cal-head">
+          <span>Purity</span><span>Per gram</span><span>Per tola (11.66g)</span><span>Per 10 grams</span>
+        </div>
+        <div class="cal-row" data-karat="1">
+          <span data-label="Purity"><strong>24K</strong> (99.9%)</span>
+          <span data-label="Per gram" class="r-gram">—</span>
+          <span data-label="Per tola" class="r-tola">—</span>
+          <span data-label="Per 10g" class="r-ten">—</span>
+        </div>
+        <div class="cal-row" data-karat="0.9167">
+          <span data-label="Purity"><strong>22K</strong> (91.7%)</span>
+          <span data-label="Per gram" class="r-gram">—</span>
+          <span data-label="Per tola" class="r-tola">—</span>
+          <span data-label="Per 10g" class="r-ten">—</span>
+        </div>
+        <div class="cal-row" data-karat="0.875">
+          <span data-label="Purity"><strong>21K</strong> (87.5%)</span>
+          <span data-label="Per gram" class="r-gram">—</span>
+          <span data-label="Per tola" class="r-tola">—</span>
+          <span data-label="Per 10g" class="r-ten">—</span>
+        </div>
+        <div class="cal-row" data-karat="0.75">
+          <span data-label="Purity"><strong>18K</strong> (75.0%)</span>
+          <span data-label="Per gram" class="r-gram">—</span>
+          <span data-label="Per tola" class="r-tola">—</span>
+          <span data-label="Per 10g" class="r-ten">—</span>
+        </div>
+      </div>
+      <p class="gp-note" style="margin-top:0.75rem">1 troy ounce = 31.1035 g · 1 tola = 11.6638 g. Figures are based on the live international spot price and exclude local duties, making charges, and dealer premiums.</p>
+    </section>
+
+    <div class="ad-slot" data-zone="mid" aria-label="Advertisement"></div>
+
+    <div class="prose">
+      <h2>How the gold rate is calculated</h2>
+      <p>Gold trades on global markets in a single, universal unit: US dollars per <strong>troy ounce</strong> (one troy ounce is 31.1035 grams). Every local gold rate you see — whether in Karachi, Delhi, Dubai, or London — starts from this one international price, known by its ticker <a href="/gold-price">XAUUSD</a>. To turn it into a local rate, three things are applied: the currency exchange rate, the weight unit you want (gram, tola, or 10 grams), and the purity (karat) of the gold.</p>
+      <p>That is exactly what the calculator above does, live. It takes the current international price, converts it to your currency using the rate you set, and breaks it down by weight and karat. Because it is driven by the real market price, it moves throughout the day just as the actual gold market does.</p>
+
+      <h2>Tola, gram, and 10 grams — which is used where?</h2>
+      <p>Different regions quote gold in different units, which is why the same metal can seem to have many "prices":</p>
+      <ul>
+        <li><strong>Per tola</strong> — the traditional unit across Pakistan, India, and much of South Asia. One tola equals 11.6638 grams.</li>
+        <li><strong>Per 10 grams</strong> — the standard quote in India for bullion and daily rate reporting.</li>
+        <li><strong>Per gram</strong> — used everywhere for jewellery pricing and smaller purchases.</li>
+        <li><strong>Per ounce</strong> — the international standard used by traders and global markets.</li>
+      </ul>
+
+      <h2>24K vs 22K vs 21K vs 18K — what the karat means</h2>
+      <p>Karat (K) measures purity. <strong>24K</strong> is essentially pure gold (99.9%), used for bars, coins, and investment. <strong>22K</strong> (91.7%) and <strong>21K</strong> (87.5%) are the most common for jewellery in South Asia and the Gulf because the added alloy makes the piece more durable. <strong>18K</strong> (75%) is popular for modern and Western jewellery. Since lower-karat gold contains less pure metal, its rate per gram or tola is proportionally lower — which is why the table above shows different figures for each purity.</p>
+
+      <h2>Why your local jeweller's rate may differ</h2>
+      <p>The figures here reflect the pure <em>metal value</em> from the live global market. The price you actually pay at a shop usually adds several local factors: import duty and taxes, the jeweller's <strong>making charges</strong> (labour), and a dealer premium. It can also lag the international price slightly, since many shops update once or twice a day. Use this page to know the fair underlying metal value before you buy or sell — it is your best defence against overpaying.</p>
+
+      <h2>From gold rate to gold trading</h2>
+      <p>Knowing the rate is useful for buyers and sellers, but traders go a step further and try to profit from gold's price <em>movements</em>. If that interests you, our free <a href="/app">Gold Signal Bot</a> analyses the XAUUSD chart and produces live BUY/SELL signals, and our <a href="/news/gold-trading-for-beginners">beginner's guide</a> explains how to start safely. You can also track the <a href="/calendar">events that move gold</a> and size any trade with our <a href="/tools">free calculators</a>.</p>
+
+      <div class="article-disclaimer">Gold rates shown are estimates derived from the live international spot price and a user-set exchange rate. They exclude taxes, duties, making charges, and dealer premiums, and may differ from local retail rates. For information only — not financial advice or a dealing price.</div>
+    </div>
+
+    <div class="affiliate-slot" aria-label="Partner offer"></div>
+
+    <section class="cta-box">
+      <h2>Track gold live &amp; trade it free</h2>
+      <p>Get live gold signals with entry, stop, and target — no signup.</p>
+      <a href="/app" class="btn-primary">Open Gold Signal Bot</a>
+    </section>
+
+    <section class="article-related">
+      <h2>Related</h2>
+      <ul>
+        <li><a href="/gold-price">Gold Price Today (live chart)</a></li>
+        <li><a href="/news/gold-price-drivers-xauusd">What Moves the Price of Gold?</a></li>
+        <li><a href="/glossary">Gold Trading Glossary</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/app">Live App</a>
+      <a href="/gold-price">Gold Price</a>
+      <a href="/gold-rate">Gold Rate</a>
+      <a href="/tools">Tools</a>
+      <a href="/news">News</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p>© 2026 Trading Bots Live · Educational use only · Not financial advice</p>
+  </footer>
+
+  <script>
+  (function () {
+    var API = window.location.origin + '/api';
+    var TROY_OZ_G = 31.1034768;
+    var TOLA_G = 11.6638038;
+    var lastPrice = null;
+
+    function fmt(n) { return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+
+    function currencyCode() {
+      var sel = document.getElementById('cv-currency').value || 'USD|1';
+      return sel.split('|')[0];
+    }
+
+    function money(n, code) {
+      return code + ' ' + Number(n).toLocaleString('en-US', { maximumFractionDigits: 2 });
+    }
+
+    function renderTable() {
+      if (lastPrice == null) return;
+      var rate = parseFloat(document.getElementById('cv-rate').value);
+      if (!Number.isFinite(rate) || rate <= 0) rate = 1;
+      var code = currencyCode();
+      var perGram24 = (lastPrice * rate) / TROY_OZ_G;
+
+      document.querySelectorAll('#rate-table .cal-row[data-karat]').forEach(function (row) {
+        var k = parseFloat(row.getAttribute('data-karat')) || 1;
+        var g = perGram24 * k;
+        row.querySelector('.r-gram').textContent = money(g, code);
+        row.querySelector('.r-tola').textContent = money(g * TOLA_G, code);
+        row.querySelector('.r-ten').textContent = money(g * 10, code);
+      });
+    }
+
+    function paint(data) {
+      if (!data || typeof data.price !== 'number') return;
+      var price = data.price;
+      lastPrice = price;
+      document.getElementById('gp-price').textContent = fmt(price);
+
+      var candles = Array.isArray(data.candles) ? data.candles : [];
+      var openRef = candles.length ? candles[0].open : price;
+      var diff = price - openRef;
+      var pct = openRef ? (diff / openRef) * 100 : 0;
+      var up = diff >= 0;
+      var ch = document.getElementById('gp-change');
+      ch.textContent = (up ? '▲ +' : '▼ ') + diff.toFixed(2) + '  (' + (up ? '+' : '') + pct.toFixed(2) + '%) session';
+      ch.className = 'gp-change ' + (up ? 'gp-up' : 'gp-down');
+
+      var when = data.lastUpdate ? new Date(data.lastUpdate) : new Date();
+      document.getElementById('gp-updated').textContent = 'Last updated: ' + when.toLocaleTimeString();
+      renderTable();
+    }
+
+    document.getElementById('cv-currency').addEventListener('change', function () {
+      var parts = (this.value || 'USD|1').split('|');
+      document.getElementById('cv-rate').value = parts[1] || 1;
+      renderTable();
+    });
+    document.getElementById('cv-rate').addEventListener('input', renderTable);
+
+    function load() {
+      fetch(API + '/data')
+        .then(function (r) { return r.ok ? r.json() : fetch(API + '/market').then(function (x) { return x.json(); }); })
+        .then(paint)
+        .catch(function () {
+          document.getElementById('gp-change').textContent = 'Live price temporarily unavailable — open the dashboard.';
+        });
+    }
+
+    load();
+    setInterval(load, 60000);
+  })();
+  </script>
+  <script src="/nav.js"></script>
+  <script src="/footer.js"></script>
+  <script src="/site-config.js"></script>
+  <script src="/monetize.js"></script>
+</body>
+</html>

@@ -24,6 +24,7 @@ const pageRoutes = {
   '/glossary': 'glossary.html',
   '/calendar': 'calendar.html',
   '/gold-price': 'gold-price.html',
+  '/gold-rate': 'gold-rate.html',
   '/about': 'about.html',
   '/how-it-works': 'how-it-works.html',
   '/disclaimer': 'disclaimer.html',
