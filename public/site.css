@@ -1062,6 +1062,57 @@ a:hover { text-decoration: underline; }
   font-size: 0.8rem;
 }
 
+.gp-chart-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.gp-chart-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.gp-chart-head h2 { font-size: 1.1rem; margin: 0; }
+
+.gp-chart-range {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.gp-chart {
+  display: block;
+  width: 100%;
+  height: 240px;
+}
+
+.gp-conv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.gp-conv-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: #0d1117;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+}
+
+.gp-conv-row span { color: var(--muted); font-size: 0.85rem; }
+.gp-conv-row strong { color: var(--gold); font-size: 0.95rem; white-space: nowrap; }
+
 @media (max-width: 640px) {
   .cal-head { display: none; }
   .cal-row {

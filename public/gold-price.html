@@ -6,8 +6,8 @@
   <link rel="icon" href="/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="/logo.png" />
   <title>Gold Price Today (XAUUSD) — Live Gold Rate &amp; Signal | Trading Bots Live</title>
-  <meta name="description" content="Live gold price today (XAUUSD) in US dollars, updated every minute. See the current gold rate, intraday high/low, trend, RSI, and a free live BUY/SELL signal." />
-  <meta name="keywords" content="gold price today, XAUUSD live price, gold rate, live gold price, gold price per ounce, spot gold price, gold price chart" />
+  <meta name="description" content="Live gold price today (XAUUSD), updated every minute, with a live chart and a converter for gold price per gram, per tola, per 10g and per kilogram in any currency. Free BUY/SELL signal included." />
+  <meta name="keywords" content="gold price today, XAUUSD live price, gold rate, live gold price, gold price per gram, gold price per tola, gold price per ounce, gold price per 10 grams, spot gold price, gold price chart, 22k 24k gold rate" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://trading-bots.live/gold-price" />
   <meta property="og:type" content="website" />
@@ -66,10 +66,41 @@
       </div>
     </section>
 
+    <section class="gp-chart-wrap" aria-label="Live gold price chart">
+      <div class="gp-chart-head">
+        <h2>Live Gold Price Chart</h2>
+        <span class="gp-chart-range">XAUUSD · M15 · last 60 candles</span>
+      </div>
+      <canvas id="gp-chart" class="gp-chart" height="240"></canvas>
+    </section>
+
     <div class="gp-cta-row">
       <a href="/app" class="btn-primary">Open full live dashboard →</a>
       <span class="gp-note">Auto-refreshes every 60s · Source: COMEX GC=F / MT5</span>
     </div>
+
+    <section class="tool-card gp-converter" aria-label="Gold value converter">
+      <h2>🧮 Gold Value Converter</h2>
+      <p class="tool-sub">Convert the live gold price into any weight — per gram, tola, or kilogram — and your local currency.</p>
+      <div class="tool-grid">
+        <label>Currency code
+          <input type="text" id="cv-code" value="USD" maxlength="5" />
+        </label>
+        <label>Exchange rate (units per 1 USD)
+          <input type="number" id="cv-rate" value="1" min="0" step="any" />
+        </label>
+        <label>Purity (karat)
+          <select id="cv-karat">
+            <option value="1">24K (pure)</option>
+            <option value="0.9167">22K</option>
+            <option value="0.75">18K</option>
+            <option value="0.5833">14K</option>
+          </select>
+        </label>
+      </div>
+      <div class="gp-conv-grid" id="cv-out"></div>
+      <p class="gp-note" style="margin-top:0.75rem">Set the exchange rate to your local currency (e.g. for PKR enter ~278) to see the gold rate in your currency. 1 tola = 11.6638 g · 1 troy ounce = 31.1035 g.</p>
+    </section>
 
     <div class="ad-slot" data-zone="mid" aria-label="Advertisement"></div>
 
@@ -124,7 +155,77 @@
   <script>
   (function () {
     var API = window.location.origin + '/api';
+    var lastPrice = null;
+    var lastCandles = [];
+    var TROY_OZ_G = 31.1034768;
+    var TOLA_G = 11.6638038;
+
     function fmt(n) { return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+
+    function drawChart(candles) {
+      var cv = document.getElementById('gp-chart');
+      if (!cv || !candles.length) return;
+      var ctx = cv.getContext('2d');
+      var w = cv.clientWidth || cv.parentElement.clientWidth || 600;
+      var h = cv.height;
+      cv.width = w;
+      ctx.clearRect(0, 0, w, h);
+
+      var closes = candles.map(function (c) { return c.close; });
+      var n = closes.length;
+      if (n < 2) return;
+      var min = Math.min.apply(null, closes);
+      var max = Math.max.apply(null, closes);
+      var pad = (max - min) * 0.12 || 1;
+      min -= pad; max += pad;
+      var span = max - min || 1;
+      function X(i) { return (i / (n - 1)) * w; }
+      function Y(v) { return h - ((v - min) / span) * (h - 6) - 3; }
+
+      var up = closes[n - 1] >= closes[0];
+      var color = up ? '#3fb950' : '#f85149';
+
+      var grad = ctx.createLinearGradient(0, 0, 0, h);
+      grad.addColorStop(0, color + '55');
+      grad.addColorStop(1, color + '00');
+      ctx.beginPath();
+      ctx.moveTo(0, Y(closes[0]));
+      for (var i = 1; i < n; i++) ctx.lineTo(X(i), Y(closes[i]));
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = grad; ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(0, Y(closes[0]));
+      for (var j = 1; j < n; j++) ctx.lineTo(X(j), Y(closes[j]));
+      ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.lineJoin = 'round'; ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(X(n - 1), Y(closes[n - 1]), 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = color; ctx.fill();
+    }
+
+    function updateConverter() {
+      var out = document.getElementById('cv-out');
+      if (!out || lastPrice == null) return;
+      var rate = parseFloat(document.getElementById('cv-rate').value);
+      if (!Number.isFinite(rate) || rate <= 0) rate = 1;
+      var karat = parseFloat(document.getElementById('cv-karat').value) || 1;
+      var code = (document.getElementById('cv-code').value || 'USD').toUpperCase();
+
+      var perOz = lastPrice * rate * karat;
+      var perGram = perOz / TROY_OZ_G;
+      var rows = [
+        ['Per troy ounce (31.1g)', perOz],
+        ['Per gram', perGram],
+        ['Per 10 grams', perGram * 10],
+        ['Per tola (11.66g)', perGram * TOLA_G],
+        ['Per kilogram', perGram * 1000],
+      ];
+      out.innerHTML = rows.map(function (r) {
+        return '<div class="gp-conv-row"><span>' + r[0] + '</span><strong>' + code + ' ' +
+          r[1].toLocaleString('en-US', { maximumFractionDigits: 2 }) + '</strong></div>';
+      }).join('');
+    }
 
     function paint(data) {
       if (!data || typeof data.price !== 'number') return;
@@ -132,6 +233,7 @@
       document.getElementById('gp-price').textContent = fmt(price);
 
       var candles = Array.isArray(data.candles) ? data.candles : [];
+      lastCandles = candles;
       var openRef = candles.length ? candles[0].open : price;
       var high = price, low = price;
       candles.forEach(function (c) { if (c.high > high) high = c.high; if (c.low < low) low = c.low; });
@@ -157,7 +259,17 @@
 
       var when = data.lastUpdate ? new Date(data.lastUpdate) : new Date();
       document.getElementById('gp-updated').textContent = 'Last updated: ' + when.toLocaleTimeString();
+
+      lastPrice = price;
+      drawChart(candles);
+      updateConverter();
     }
+
+    ['cv-rate', 'cv-code', 'cv-karat'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('input', updateConverter);
+    });
+    window.addEventListener('resize', function () { drawChart(lastCandles); });
 
     function load() {
       fetch(API + '/data')
