@@ -18,9 +18,9 @@
     },
     {
       title: 'Learn', links: [
+        { label: 'Gold Trading Strategy', href: '/gold-trading-strategy' },
         { label: 'News & Guides', href: '/news' },
         { label: 'How It Works', href: '/how-it-works' },
-        { label: 'Gold Trading for Beginners', href: '/news/gold-trading-for-beginners' },
         { label: 'Risk Management', href: '/news/gold-risk-management-guide' },
       ]
     },

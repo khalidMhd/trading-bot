@@ -1,6 +1,15 @@
 /** Article registry — add new posts here and create matching HTML in /news/ */
 window.NEWS_ARTICLES = [
   {
+    slug: 'gold-scalping-strategy',
+    title: 'Gold Scalping Strategy: A Practical XAUUSD M1/M5 Guide',
+    excerpt: 'Fast M1/M5 gold scalping — entries, tight stops, the right sessions and spreads, plus the mistakes that blow up scalpers.',
+    category: 'strategy',
+    categoryLabel: 'Strategy',
+    date: '2026-07-19',
+    readMin: 9,
+  },
+  {
     slug: 'gold-risk-management-guide',
     title: 'Gold Risk Management: Position Size, Stop Loss & Risk-to-Reward',
     excerpt: 'The skill that keeps traders alive. Position sizing, stop losses, risk-to-reward, daily loss limits, and leverage — explained with numbers.',

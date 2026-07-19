@@ -17,6 +17,7 @@
     },
     {
       type: 'group', label: 'Learn', items: [
+        { label: 'Gold Trading Strategy', href: '/gold-trading-strategy' },
         { label: 'News & Guides', href: '/news' },
         { label: 'How It Works', href: '/how-it-works' },
         { label: 'Glossary', href: '/glossary' },
