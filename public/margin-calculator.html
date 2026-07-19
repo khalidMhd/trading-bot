@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Margin Calculator — Forex &amp; Gold Required Margin &amp; Leverage | Trading Bots Live</title>
+  <meta name="description" content="Free margin calculator for forex and gold. Enter lot size, price and leverage to find the required margin for a trade, and see how leverage affects your deposit." />
+  <meta name="keywords" content="margin calculator, forex margin calculator, leverage calculator, required margin, gold margin calculator, XAUUSD margin, how much margin" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://trading-bots.live/margin-calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Margin Calculator (Forex &amp; Gold)" />
+  <meta property="og:description" content="Find the required margin for a trade from lot size, price and leverage." />
+  <meta property="og:url" content="https://trading-bots.live/margin-calculator" />
+  <meta property="og:image" content="https://trading-bots.live/logo.png" />
+  <link rel="stylesheet" href="/site.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9250909224692232" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Margin Calculator","url":"https://trading-bots.live/margin-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free forex and gold margin calculator based on lot size, price and leverage."}
+  </script>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="site-logo"><img src="/logo.png" alt="" class="site-logo-img" width="32" height="32" />Trading Bots <span class="live-dot">Live</span></a>
+    <div class="site-links">
+      <a href="/app">Live App</a>
+      <a href="/tools">Tools</a>
+      <a href="/margin-calculator" class="active">Margin Calculator</a>
+      <a href="/news">News</a>
+      <a href="/how-it-works">How It Works</a>
+    </div>
+  </nav>
+
+  <div class="ad-slot" data-zone="top" aria-label="Advertisement"></div>
+
+  <main class="site-wrap">
+    <header class="page-header">
+      <h1>Margin Calculator</h1>
+      <p>Find out how much margin a trade requires — for gold or any forex pair — and see exactly how leverage changes it.</p>
+    </header>
+
+    <section class="tool-card" aria-label="Margin calculator">
+      <div class="tool-grid">
+        <label>Lot size
+          <input type="number" id="mg-lots" value="0.10" min="0" step="any" />
+        </label>
+        <label>Contract size (units/lot)
+          <input type="number" id="mg-contract" value="100" min="1" step="any" />
+        </label>
+        <label>Price
+          <input type="number" id="mg-price" value="2400" min="0" step="any" />
+        </label>
+        <label>Leverage (1 : X)
+          <input type="number" id="mg-leverage" value="100" min="1" step="any" />
+        </label>
+      </div>
+      <p class="gp-note" style="margin-bottom:1rem">Tip: for gold use contract size 100 (oz/lot). For forex majors use 100000 (units/lot).</p>
+      <button type="button" class="btn-primary" id="mg-calc">Calculate required margin</button>
+      <div id="mg-result" class="tool-result" hidden></div>
+    </section>
+
+    <div class="ad-slot" data-zone="mid" aria-label="Advertisement"></div>
+
+    <div class="prose">
+      <h2>What is margin?</h2>
+      <p><strong>Margin</strong> is the amount of money your broker requires you to set aside to open a leveraged position. It is not a fee — it is a good-faith deposit that is locked while the trade is open and released when you close it. Because forex and gold are traded with leverage, you only need a fraction of the position's full value as margin. The exact fraction is set by your leverage: at 100:1 leverage, you need just 1% of the position's value; at 500:1, only 0.2%.</p>
+
+      <h2>How required margin is calculated</h2>
+      <p>The formula is straightforward:</p>
+      <p><strong>Required margin = (Lot size × Contract size × Price) ÷ Leverage</strong></p>
+      <p>The first part — lot size × contract size × price — is the <em>notional value</em>, the full size of the position you control. Dividing by your leverage gives the actual cash you must put up. For example, one micro lot of gold (0.01 × 100 oz) at $2,400 is a $2,400 notional position; at 100:1 leverage, you only need $24 of margin to open it.</p>
+
+      <h2>Margin and leverage: handle with care</h2>
+      <p>Leverage is a double-edged sword. High leverage means small margin, which frees up capital — but it also means a small adverse move can wipe out that margin fast, triggering a <strong>margin call</strong> or automatic liquidation. The mistake beginners make is treating low margin requirements as permission to trade large. Don't. Your position size should always be governed by your <a href="/news/gold-risk-management-guide">risk per trade</a>, not by how little margin the broker demands. Use our <a href="/tools">position size calculator</a> to size trades by risk, and this tool only to confirm you have enough free margin.</p>
+
+      <div class="article-disclaimer">This calculator gives an estimate. Actual margin depends on your broker, account currency, instrument, and any currency conversion. Values for pairs not quoted in your account currency are approximate. Not financial advice.</div>
+    </div>
+
+    <div class="affiliate-slot" aria-label="Partner offer"></div>
+
+    <section class="cta-box">
+      <h2>Trade gold with clear risk</h2>
+      <a href="/app" class="btn-primary">Open Gold Signal Bot</a>
+    </section>
+
+    <section class="article-related">
+      <h2>More free tools</h2>
+      <ul>
+        <li><a href="/tools">Position Size &amp; Profit Calculators</a></li>
+        <li><a href="/pivot-calculator">Pivot Point Calculator</a></li>
+        <li><a href="/fibonacci-calculator">Fibonacci Calculator</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/app">Live App</a>
+      <a href="/tools">Tools</a>
+      <a href="/margin-calculator">Margin Calculator</a>
+      <a href="/pivot-calculator">Pivot Calculator</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p>© 2026 Trading Bots Live · Educational use only · Not financial advice</p>
+  </footer>
+
+  <script>
+  (function () {
+    function num(id) { var v = parseFloat(document.getElementById(id).value); return Number.isFinite(v) ? v : NaN; }
+    function money(n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+
+    document.getElementById('mg-calc').addEventListener('click', function () {
+      var lots = num('mg-lots'), contract = num('mg-contract'), price = num('mg-price'), lev = num('mg-leverage');
+      var res = document.getElementById('mg-result');
+      if ([lots, contract, price, lev].some(Number.isNaN) || lev <= 0) {
+        res.hidden = false; res.className = 'tool-result tool-result-bad';
+        res.innerHTML = 'Please enter valid numbers (leverage must be above zero).';
+        return;
+      }
+      var notional = lots * contract * price;
+      var margin = notional / lev;
+      res.hidden = false; res.className = 'tool-result tool-result-ok';
+      res.innerHTML =
+        '<strong>Required margin: ' + money(margin) + '</strong>' +
+        '<span>Notional position value: ' + money(notional) + '</span>' +
+        '<span>Leverage used: 1 : ' + lev + '</span>' +
+        '<span>You control ' + money(notional) + ' of the market with ' + money(margin) + ' of your own capital.</span>';
+    });
+
+    document.getElementById('mg-calc').click();
+  })();
+  </script>
+  <script src="/nav.js"></script>
+  <script src="/footer.js"></script>
+  <script src="/site-config.js"></script>
+  <script src="/monetize.js"></script>
+</body>
+</html>

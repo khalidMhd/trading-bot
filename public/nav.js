@@ -13,6 +13,7 @@
     {
       type: 'group', label: 'Tools', items: [
         { label: 'Trading Calculators', href: '/tools' },
+        { label: 'Margin Calculator', href: '/margin-calculator' },
         { label: 'Pivot Point Calculator', href: '/pivot-calculator' },
         { label: 'Fibonacci Calculator', href: '/fibonacci-calculator' },
         { label: 'Confluence Simulator', href: '/simulator' },
@@ -22,6 +23,8 @@
       type: 'group', label: 'Learn', items: [
         { label: 'Gold Trading Strategy', href: '/gold-trading-strategy' },
         { label: 'Forex Trading Guide', href: '/forex-trading' },
+        { label: 'Major Currency Pairs', href: '/major-currency-pairs' },
+        { label: 'What Is a Pip?', href: '/what-is-a-pip' },
         { label: 'News & Guides', href: '/news' },
         { label: 'How It Works', href: '/how-it-works' },
         { label: 'Glossary', href: '/glossary' },
