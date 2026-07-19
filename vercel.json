@@ -26,6 +26,7 @@
     { "src": "/tools", "dest": "/public/tools.html" },
     { "src": "/tools.js", "dest": "/public/tools.js" },
     { "src": "/glossary", "dest": "/public/glossary.html" },
+    { "src": "/calendar", "dest": "/public/calendar.html" },
     { "src": "/app", "dest": "/public/app.html" },
     { "src": "/about", "dest": "/public/about.html" },
     { "src": "/how-it-works", "dest": "/public/how-it-works.html" },

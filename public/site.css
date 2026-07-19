@@ -906,4 +906,83 @@ a:hover { text-decoration: underline; }
 
 .glossary dd a { color: var(--accent); }
 
+/* ——— Economic calendar ——— */
+.section-title {
+  margin: 2.25rem 0 1rem;
+  font-size: 1.3rem;
+}
+
+.callout {
+  background: #d9a62615;
+  border: 1px solid #d9a62655;
+  border-left: 3px solid var(--gold);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.callout strong { color: var(--text); }
+.callout a { color: var(--accent); }
+
+.cal-table {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.cal-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr 2fr;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--border);
+  align-items: start;
+}
+
+.cal-row:first-child { border-top: none; }
+
+.cal-head {
+  background: #0d1117;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.cal-row span { font-size: 0.9rem; line-height: 1.55; }
+.cal-row:not(.cal-head) span:first-child { color: var(--text); }
+.cal-row:not(.cal-head) span:nth-child(2),
+.cal-row:not(.cal-head) span:nth-child(3) { color: var(--muted); }
+
+.cal-impact {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+.cal-high { background: #f8514922; color: #f87171; }
+.cal-med { background: #d9a62622; color: #e0b24a; }
+
+@media (max-width: 640px) {
+  .cal-head { display: none; }
+  .cal-row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+  .cal-row span::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .cal-row span:first-child::before { content: ""; }
+}
+
 

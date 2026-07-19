@@ -22,6 +22,7 @@ const pageRoutes = {
   '/news': 'news.html',
   '/tools': 'tools.html',
   '/glossary': 'glossary.html',
+  '/calendar': 'calendar.html',
   '/about': 'about.html',
   '/how-it-works': 'how-it-works.html',
   '/disclaimer': 'disclaimer.html',

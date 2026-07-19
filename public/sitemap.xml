@@ -26,6 +26,11 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://trading-bots.live/calendar</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://trading-bots.live/news/gold-risk-management-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
