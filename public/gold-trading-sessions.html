@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Gold Trading Sessions — Live Times in Your Timezone (XAUUSD) | Trading Bots Live</title>
+  <meta name="description" content="Live gold trading session times in your own timezone. See when the Sydney, Tokyo, London and New York sessions open and close, and a countdown to the London/NY overlap." />
+  <meta name="keywords" content="gold trading sessions, gold trading session times, best time to trade gold, forex market hours gold, london new york overlap gold, XAUUSD session times, gold market hours" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://trading-bots.live/gold-trading-sessions" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gold Trading Sessions — Live Times in Your Timezone" />
+  <meta property="og:description" content="When Sydney, Tokyo, London and New York open for gold — in your local time, with a live overlap countdown." />
+  <meta property="og:url" content="https://trading-bots.live/gold-trading-sessions" />
+  <meta property="og:image" content="https://trading-bots.live/logo.png" />
+  <link rel="stylesheet" href="/site.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9250909224692232" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the best time to trade gold?","acceptedAnswer":{"@type":"Answer","text":"The best time to trade gold is during the London and New York session overlap, roughly 13:00–17:00 GMT, when liquidity is deepest, spreads are tightest, and moves are most directional. Gold's daily high or low is frequently set during this window."}},{"@type":"Question","name":"What are the gold trading session times?","acceptedAnswer":{"@type":"Answer","text":"Approximate session times in GMT are: Sydney 22:00–07:00, Tokyo 00:00–09:00, London 08:00–17:00, and New York 13:00–22:00. This page converts them automatically to your local timezone."}},{"@type":"Question","name":"Can you trade gold 24 hours a day?","acceptedAnswer":{"@type":"Answer","text":"Gold trades around the clock from Sunday evening to Friday evening as the global sessions hand over to each other, but liquidity and volatility vary. The quieter Asian hours produce fewer high-quality setups than the active London and New York sessions."}}]}
+  </script>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="site-logo"><img src="/logo.png" alt="" class="site-logo-img" width="32" height="32" />Trading Bots <span class="live-dot">Live</span></a>
+    <div class="site-links">
+      <a href="/app">Live App</a>
+      <a href="/gold-price">Gold Price</a>
+      <a href="/gold-trading-sessions" class="active">Sessions</a>
+      <a href="/tools">Tools</a>
+      <a href="/news">News</a>
+    </div>
+  </nav>
+
+  <div class="ad-slot" data-zone="top" aria-label="Advertisement"></div>
+
+  <main class="site-wrap">
+    <header class="page-header">
+      <h1>Gold Trading Sessions — Live, In Your Timezone</h1>
+      <p>See exactly which market is open right now and when the next high-liquidity window begins — all converted to your local time automatically.</p>
+    </header>
+
+    <section class="tool-card" aria-label="Live session status">
+      <div class="sess-now">
+        <div>
+          <span class="sess-now-label">Your local time</span>
+          <span class="sess-now-time" id="local-time">—</span>
+          <span class="sess-tz" id="local-tz"></span>
+        </div>
+        <div>
+          <span class="sess-now-label">GMT / UTC</span>
+          <span class="sess-now-time" id="gmt-time">—</span>
+        </div>
+      </div>
+
+      <div class="session-clock" id="session-clock">
+        <div class="session-box" data-session="sydney"><span class="session-name">Sydney</span><span class="session-state">—</span><span class="sess-hours" id="h-sydney"></span></div>
+        <div class="session-box" data-session="tokyo"><span class="session-name">Tokyo</span><span class="session-state">—</span><span class="sess-hours" id="h-tokyo"></span></div>
+        <div class="session-box" data-session="london"><span class="session-name">London</span><span class="session-state">—</span><span class="sess-hours" id="h-london"></span></div>
+        <div class="session-box" data-session="newyork"><span class="session-name">New York</span><span class="session-state">—</span><span class="sess-hours" id="h-newyork"></span></div>
+      </div>
+
+      <div class="sess-overlap" id="sess-overlap">Calculating the next London–New York overlap…</div>
+      <p class="session-tip" id="session-tip"></p>
+    </section>
+
+    <div class="ad-slot" data-zone="mid" aria-label="Advertisement"></div>
+
+    <div class="prose">
+      <h2>Why sessions matter for gold</h2>
+      <p>Gold trades nearly around the clock, but it does not move the same way at all hours. As the trading day rolls from Sydney to Tokyo to London to New York, liquidity and volatility rise and fall. Trading during the busy, liquid sessions means tighter spreads and cleaner, more directional moves; trading the quiet hours means wider spreads and choppy, unpredictable price action. Knowing which session is live — in <em>your</em> timezone — is one of the simplest edges a gold trader can have.</p>
+
+      <h2>The four sessions at a glance</h2>
+      <ul>
+        <li><strong>Sydney</strong> (approx. 22:00–07:00 GMT) — the quiet open of the trading day; thin liquidity.</li>
+        <li><strong>Tokyo / Asian</strong> (approx. 00:00–09:00 GMT) — moderate activity; often range-bound, good for marking the range that London will break.</li>
+        <li><strong>London</strong> (approx. 08:00–17:00 GMT) — liquidity jumps; strong directional moves and breakouts begin.</li>
+        <li><strong>New York</strong> (approx. 13:00–22:00 GMT) — the highest-volatility session, driven by US economic data.</li>
+      </ul>
+      <p>These are standard-time approximations; actual times shift by an hour when regions observe daylight saving. The live clock above always reflects the current conversion to your device's timezone.</p>
+
+      <h2>The golden window: London–New York overlap</h2>
+      <p>The single best time to trade gold is the <strong>overlap of the London and New York sessions</strong> — roughly 13:00–17:00 GMT. For those few hours, both of the world's largest financial centres are active at once. Liquidity is deepest, spreads are tightest, and price moves are at their most directional. In fact, gold's daily high or low is established during this window a large share of the time. If you can only trade for a couple of hours a day, make it this one. The countdown above tells you exactly when it starts in your local time.</p>
+
+      <h2>Trading the quieter hours</h2>
+      <p>This does not mean the Asian session is useless. Range-bound Asian hours are perfect for <em>preparation</em>: mark the session high and low, identify key levels, and plan the breakout trade for the London open. Just be realistic — fewer high-probability setups appear in thin liquidity, and forcing trades in dead conditions is a common way to bleed an account through spreads. Our <a href="/app">signal dashboard</a> factors session liquidity into every signal, which is why you will often see HOLD during the quiet hours.</p>
+
+      <h2>Don't forget the news calendar</h2>
+      <p>Session timing tells you <em>when</em> gold is liquid; the economic calendar tells you <em>when it might explode</em>. High-impact US releases — CPI, NFP, and FOMC — land during the New York session and can override normal session behaviour entirely. Always check the <a href="/calendar">gold economic calendar</a> alongside this clock, and read our full <a href="/news/best-times-trade-gold">best times to trade gold</a> guide for the complete picture.</p>
+
+      <div class="article-disclaimer">Session times are approximate and shift with daylight saving. This page is for information and education only — not financial advice. Trading gold carries a substantial risk of loss.</div>
+    </div>
+
+    <div class="affiliate-slot" aria-label="Partner offer"></div>
+
+    <section class="cta-box">
+      <h2>Trade the golden window with live signals</h2>
+      <p>Get BUY/SELL gold signals that factor in session liquidity — free, no signup.</p>
+      <a href="/app" class="btn-primary">Open Gold Signal Bot</a>
+    </section>
+
+    <section class="article-related">
+      <h2>Related</h2>
+      <ul>
+        <li><a href="/news/best-times-trade-gold">Best Times to Trade Gold</a></li>
+        <li><a href="/gold-trading-strategy">Gold Trading Strategy</a></li>
+        <li><a href="/calendar">Gold Economic Calendar</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/app">Live App</a>
+      <a href="/gold-trading-sessions">Sessions</a>
+      <a href="/calendar">Calendar</a>
+      <a href="/news">News</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p>© 2026 Trading Bots Live · Educational use only · Not financial advice</p>
+  </footer>
+
+  <script>
+  (function () {
+    // Session windows in UTC hours (standard-time approximations)
+    var SESSIONS = {
+      sydney: { open: 22, close: 7 },
+      tokyo: { open: 0, close: 9 },
+      london: { open: 8, close: 17 },
+      newyork: { open: 13, close: 22 },
+    };
+    var OVERLAP_START = 13, OVERLAP_END = 17; // UTC
+
+    function isOpen(s, h) {
+      if (s.open < s.close) return h >= s.open && h < s.close;
+      return h >= s.open || h < s.close;
+    }
+
+    function localLabel(utcHour) {
+      var d = new Date();
+      d.setUTCHours(utcHour, 0, 0, 0);
+      return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+    function update() {
+      var now = new Date();
+      var utcHour = now.getUTCHours() + now.getUTCMinutes() / 60;
+
+      document.getElementById('local-time').textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      document.getElementById('gmt-time').textContent = pad(now.getUTCHours()) + ':' + pad(now.getUTCMinutes()) + ' GMT';
+      try {
+        var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        document.getElementById('local-tz').textContent = tz || '';
+      } catch (e) {}
+
+      var openNames = [];
+      Object.keys(SESSIONS).forEach(function (key) {
+        var s = SESSIONS[key];
+        var open = isOpen(s, utcHour);
+        var box = document.querySelector('.session-box[data-session="' + key + '"]');
+        box.classList.toggle('session-open', open);
+        box.classList.toggle('session-closed', !open);
+        box.querySelector('.session-state').textContent = open ? 'OPEN' : 'Closed';
+        var hEl = document.getElementById('h-' + key);
+        if (hEl) hEl.textContent = localLabel(s.open) + ' – ' + localLabel(s.close);
+        if (open) openNames.push(box.querySelector('.session-name').textContent);
+      });
+
+      // Overlap countdown
+      var inOverlap = utcHour >= OVERLAP_START && utcHour < OVERLAP_END;
+      var ov = document.getElementById('sess-overlap');
+      if (inOverlap) {
+        var minsLeft = Math.round((OVERLAP_END - utcHour) * 60);
+        ov.className = 'sess-overlap sess-overlap-live';
+        ov.innerHTML = '🔥 <strong>London–New York overlap is LIVE</strong> — highest liquidity right now. Ends in ' + Math.floor(minsLeft / 60) + 'h ' + (minsLeft % 60) + 'm.';
+      } else {
+        var hoursUntil = OVERLAP_START - utcHour;
+        if (hoursUntil < 0) hoursUntil += 24;
+        var h = Math.floor(hoursUntil);
+        var m = Math.round((hoursUntil - h) * 60);
+        ov.className = 'sess-overlap';
+        ov.innerHTML = '⏳ Next <strong>London–New York overlap</strong> (best time to trade gold) starts in <strong>' + h + 'h ' + m + 'm</strong> — around ' + localLabel(OVERLAP_START) + ' your time.';
+      }
+
+      var tip = document.getElementById('session-tip');
+      if (openNames.length) {
+        tip.textContent = 'Currently open: ' + openNames.join(', ') + '.';
+      } else {
+        tip.textContent = 'Markets are between major sessions — liquidity is low right now.';
+      }
+    }
+
+    update();
+    setInterval(update, 1000);
+  })();
+  </script>
+  <script src="/nav.js"></script>
+  <script src="/footer.js"></script>
+  <script src="/site-config.js"></script>
+  <script src="/monetize.js"></script>
+</body>
+</html>

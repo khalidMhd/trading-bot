@@ -31,6 +31,7 @@
     { "src": "/gold-rate", "dest": "/public/gold-rate.html" },
     { "src": "/simulator", "dest": "/public/simulator.html" },
     { "src": "/gold-trading-strategy", "dest": "/public/gold-trading-strategy.html" },
+    { "src": "/gold-trading-sessions", "dest": "/public/gold-trading-sessions.html" },
     { "src": "/app", "dest": "/public/app.html" },
     { "src": "/about", "dest": "/public/about.html" },
     { "src": "/how-it-works", "dest": "/public/how-it-works.html" },

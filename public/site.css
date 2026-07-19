@@ -1046,6 +1046,52 @@ a:hover { text-decoration: underline; }
   padding: 0.85rem 1rem;
 }
 
+/* ——— Sessions page ——— */
+.sess-now {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+.sess-now-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+.sess-now-time {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.sess-tz { font-size: 0.78rem; color: var(--muted); }
+
+.sess-hours {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+.sess-overlap {
+  margin: 1rem 0 0.75rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 10px;
+  background: #0d1117;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.sess-overlap strong { color: var(--text); }
+.sess-overlap-live {
+  background: #3fb95015;
+  border-color: var(--buy);
+}
+.sess-overlap-live strong { color: var(--buy); }
+
 /* ——— Glossary ——— */
 .glossary {
   max-width: 780px;

@@ -27,6 +27,7 @@ const pageRoutes = {
   '/gold-rate': 'gold-rate.html',
   '/simulator': 'simulator.html',
   '/gold-trading-strategy': 'gold-trading-strategy.html',
+  '/gold-trading-sessions': 'gold-trading-sessions.html',
   '/about': 'about.html',
   '/how-it-works': 'how-it-works.html',
   '/disclaimer': 'disclaimer.html',
